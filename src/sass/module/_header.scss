@@ -1,0 +1,51 @@
+@use "global" as *;
+
+.header {
+  height: rem(80);  
+  background: rgba(13, 41, 54, 0.68);
+  z-index: 1000;
+  position: fixed;  //上に固定
+  width: 100%;
+  transition: 0.3s;
+  @include mq(md) {
+    height: rem(90);
+  }
+}
+
+.header.is-color {  
+  background: rgba(13, 41, 54, 0.68);
+}
+
+.header__inner {
+  height: inherit;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 rem(15);
+  @include mq(md){
+    padding: 0 rem(30);    
+  }
+}
+
+.header__logo {
+  width: rem(102); 
+  display: inline-block; 
+  @include mq(md) {
+    width: rem(133);
+  }
+}
+
+.header__drawer { //ドロワーメニュー非表示
+  @include mq(md) {
+    display: none;
+  }
+}
+
+.header__pc-nav {
+  height: inherit;
+  display: none;
+  @include mq(md){
+    display: block;
+  }
+}
+

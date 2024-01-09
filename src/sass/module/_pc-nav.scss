@@ -1,0 +1,40 @@
+@use "global" as *;
+
+.pc-nav__items {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: inherit;
+}
+
+.pc-nav__item a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: $white;  
+  letter-spacing: 0.06em;
+  font-weight: $normal;
+  padding-left: rem(13);
+  padding-right: rem(12);
+}
+
+.pc-nav__en-item {
+  font-family: $en-font-family;
+  font-size: rem(18);
+  line-height: 1;
+}
+
+.pc-nav__ja-item {
+  font-family: $ja-font-family;
+  font-size: rem(10);
+  line-height: calc(15 / 10);
+  margin-top: rem(4);
+  
+}
+
+.pc-nav__item:first-child a {
+  padding-left: 0;
+}
+.pc-nav__item:last-child a {
+  padding-right: 0;
+}

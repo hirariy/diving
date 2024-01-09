@@ -1,0 +1,32 @@
+@use "global" as *;
+
+.section-header {
+  text-align: center;
+}
+
+.section-header__jaTitle {
+  color: $green;
+  font-family: $ja-font-family;
+  font-size: rem(12);
+  font-style: normal;
+  font-weight: $normal;
+  line-height: 150%; /* 150% */
+  margin-top: rem(8);  
+}
+
+.section-header__engTitle {
+  color: $black;
+  font-family: $en-font-family;
+  font-size: rem(32);
+  font-style: normal;
+  font-weight: $normal;
+  line-height: 1;
+  @include mq(md) {
+    font-size: rem(40);
+  }
+} 
+
+.section-header--color {
+  color: $green;  
+}
+

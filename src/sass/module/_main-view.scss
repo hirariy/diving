@@ -1,0 +1,41 @@
+@use "global" as *;
+
+.main-view {
+  height: 100vh;
+  object-fit: cover;
+  object-position: center;
+  position: relative;
+}
+
+.main-view__titles {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: $white; 
+  margin: auto; 
+}
+
+.main-view__title { 
+  margin: 0;  
+  font-family: $en-font2-family;
+  font-size: rem(40);
+  font-style: normal;
+  font-weight: $normal;
+  line-height: 125%;
+  letter-spacing: rem(21.6);
+  @include mq(md) {
+    font-size: rem(80);
+    letter-spacing: rem(43.2);    
+  }
+}
+
+.main-view__subtitle {  
+  margin: 0;  
+  font-family: $en-font-family;
+  font-size: rem(20);
+  font-style: normal;
+  font-weight: $normal;
+  line-height: normal;
+}

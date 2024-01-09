@@ -1,0 +1,44 @@
+@use "global" as *;
+
+.swiper-container {
+  margin-top: rem(20);  
+  @include mq(md) {
+    margin-top: rem(80);   
+  }  
+}
+
+.swiper {
+  width: 100vw;
+  margin: 0 calc(50% - 50vw); 
+}
+
+.swiper-wrapper {
+    transition-timing-function: linear;
+    gap: rem(40);   
+    padding-bottom: rem(10);     
+}
+
+.swiper-slide img {
+    display: block;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.swiper-button-prev {
+  display: none;
+  @include mq(md) {
+    position: absolute;
+    top: 10%;
+    color: #000;
+  } 
+}
+
+.swiper-button-next{
+  display: none;
+  @include mq(md) {
+    position: absolute;
+    top: 10%;
+    color: #000;
+  }
+}

@@ -1,0 +1,16 @@
+@use "global" as *;
+
+.campaign {
+  @include mq(md) {
+    position: relative;
+  }
+}
+
+.campaign__button { 
+  margin-top: rem(30);
+  margin-right: auto;
+  margin-left: auto;  
+  @include mq(md) {
+    margin-top: rem(70);    
+  }  
+}

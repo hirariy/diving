@@ -1,0 +1,59 @@
+@use "global" as *;
+
+.to-top {
+  position: fixed;
+  right: rem(15);
+  bottom: rem(10);
+  border-radius: 50%;
+  overflow: hidden;
+  border: rem(1) solid $green;
+  @include mq(md) {
+    right: rem(20);
+  }
+}
+
+.to-top a {
+  display: block;
+  width: rem(48);
+  height: rem(48);
+  background-color: #fff;
+  position: relative;
+  @include mq(md) {
+    width: rem(80);
+    height: rem(80);
+  }
+}
+
+.to-top__line01 {
+  position: absolute;
+  top: 50%;
+  right: 20%;
+  width: rem(28);
+  height: 1px;
+  background-color: $green;
+  border-radius: rem(4);
+  transform: rotate(-90deg);
+  @include mq(md) {
+    top: 50%;
+    right: 20%;
+    width: rem(46);
+    transform: rotate(-90deg);
+  }
+}
+.to-top__line02 {
+  position: absolute;
+  top: 37%;
+  right: 67%;
+  transform-origin: right bottom;
+  width: rem(12);
+  height: rem(1);
+  background-color: $green;
+  transform: rotate(134deg);
+  border-radius: rem(8);
+  @include mq(md) {
+    top: 30%;
+    right: 60%;
+    width: rem(12);
+    transform: rotate(134deg);
+  }
+}

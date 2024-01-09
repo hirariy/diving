@@ -1,0 +1,63 @@
+@use "global" as *;
+
+.nav-list { 
+  display: flex;  
+  color: $white;
+  padding: 0 rem(15);
+}
+
+.nav-list__contents-left,
+.nav-list__contents-right {
+  @include mq(md) {
+    display: flex;
+  }
+}
+
+.nav-list__items {
+  width: rem(184);
+  @include mq(md) {
+    width: rem(286);
+  }
+}
+
+.nav-list__item-title::before {
+  content: "";
+  background: url(../../../assets/images/common/hitode.png) no-repeat;
+  background-size: 90%;
+  display: inline-block; 
+  width: rem(18);
+  height: rem(18);
+  vertical-align: middle;
+  margin-right: rem(4);
+}
+
+.nav-list__item::before {
+  content: ""; 
+  display: inline-block;  
+  width: rem(18);
+  height: rem(18);
+  vertical-align: middle;
+  margin-right: rem(4);
+}
+
+.nav-list__item-title {
+  color: $white;
+  font-family: $ja-font-family;
+  font-size: rem(16);
+  font-style: normal;
+  font-weight: $bold;
+  line-height: calc(18/ 16); 
+  margin-top: rem(40);
+  
+}
+
+.nav-list__item {    
+  color: $white;
+  font-family: $ja-font-family;
+  font-size: rem(16);
+  font-style: normal;
+  font-weight: $normal;
+  line-height: calc(18/ 16);  
+  margin-top: rem(24);  
+}
+
