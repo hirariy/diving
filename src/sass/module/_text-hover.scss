@@ -1,0 +1,27 @@
+@use "global" as *;
+
+.text-hover { 
+  display: inline-block; 
+}
+
+.text-hover.line {
+  padding-bottom: 5px;
+  position: relative;
+}
+.text-hover.line::before {
+  background: $white;
+  content: '';
+  width: 88%;
+  height: rem(1);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+  transform-origin: center top;
+  transform: scale(0, 1);
+  transition: transform .3s;
+}
+.text-hover.line:hover::before {
+  transform-origin: center top;
+  transform: scale(1, 1);
+}
