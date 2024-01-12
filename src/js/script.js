@@ -42,32 +42,26 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
 
   const swiper = new Swiper('.swiper', {
     loop: true,
-    slidesPerView: 'auto',
-    spaceBetween: window.innerWidth < 768 ? 8 : 24,
+    slidesPerView: 1.25,
+    // spaceBetween: window.innerWidth < 768 ? 8 : 24,
     centeredSlides: true,
     breakpoints: {
-      767: {   
+      768: {   
         slidesPerView: 3.45,
-        spaceBetween: 16,
+        spaceBetween: 24,
       },
       1137: {
-        slidesPerView: 5,
-        spaceBetween: 24,
+        slidesPerView: 4,
+        spaceBetween: 40,
       }
     },
-    // speed: 6000,
-    // allowTouchMove: false,
-    // autoplay: {
-    //   delay: 0,
-    // },
-   });
+    speed: 6000,
+    allowTouchMove: false,
+    autoplay: {
+      delay: 0,
+    },
+   }); 
   
-
-})
-
-//要素の取得とスピードの設定
-var box = $('.colorbox'),
-    speed = 700;  
 
 //.colorboxの付いた全ての要素に対して下記の処理を行う
 box.each(function(){
@@ -89,4 +83,5 @@ box.each(function(){
             counter = 1;
           }
     });
-});
+  })
+})

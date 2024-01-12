@@ -14,19 +14,12 @@
 
 .swiper-wrapper {
     transition-timing-function: linear;
-    gap: rem(20);   
+    // gap: rem(20);   
     padding-bottom: rem(10); 
-    // @include mq(md) {
-    //   gap: rem(40);
-    // }    
+    @include mq(md) {
+      // gap: rem(40);
+    }    
 }
-
-// .swiper-slide img {
-//     display: block;
-//     height: 100%;
-//     width: 100%;
-//     object-fit: cover;
-// }
 
 .swiper-button-prev {
   display: none;

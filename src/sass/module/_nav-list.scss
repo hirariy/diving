@@ -3,7 +3,7 @@
 .nav-list { 
   display: flex;  
   color: $white;
-  justify-content: space-around;
+  justify-content: space-evenly;
   // padding: 0 rem(15);
   @include mq(md) {
     // padding: 0;
@@ -47,14 +47,8 @@
   margin-right: rem(4);
 }
 
-// br.nav-list__blank {
-//   content: ""; 
-//   display: inline-block;  
-//   width: rem(18);
-//   height: rem(18);
-//   vertical-align: middle;
-//   margin-right: rem(4); 
-//  }
+
+
 
 .nav-list__item-title {
   color: $white;
@@ -64,7 +58,8 @@
   font-weight: $bold;
   line-height: calc(18/ 16); 
   margin-top: rem(40);
-  
+  text-indent: rem(-22);
+  padding-left: rem(25);
 }
 
 .nav-list__item {    
