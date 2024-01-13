@@ -42,19 +42,21 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
 
   const swiper = new Swiper('.swiper', {
     loop: true,
-    slidesPerView: 1.25,
-    // spaceBetween: window.innerWidth < 768 ? 8 : 24,
+    slidesPerView: 1.35,    
+    spaceBetween: 24,
     centeredSlides: true,
     breakpoints: {
-      768: {   
-        slidesPerView: 3.45,
-        spaceBetween: 24,
+      670: {           
+        slidesPerView: 2.5,       
+      },
+      768: {         
+        slidesPerView: 3.49,      
       },
       1137: {
         slidesPerView: 4,
         spaceBetween: 40,
       }
-    },
+    },    
     speed: 6000,
     allowTouchMove: false,
     autoplay: {
@@ -63,7 +65,7 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
    }); 
   
 
-//.colorboxの付いた全ての要素に対して下記の処理を行う
+//.color boxの付いた全ての要素に対して下記の処理を行う
 box.each(function(){
     $(this).append('<div class="color"></div>')
     var color = $(this).find($('.color')),
@@ -72,7 +74,7 @@ box.each(function(){
 
     image.css('opacity','0');
     color.css('width','0%');
-    //inviewを使って背景色が画面に現れたら処理をする
+    //inViewを使って背景色が画面に現れたら処理をする
     color.on('inview', function(){
         if(counter == 0){
     $(this).delay(200).animate({'width':'100%'},speed,function(){

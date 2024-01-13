@@ -3,8 +3,15 @@
 .aboutUs {
   padding-bottom: rem(70);
   @include mq(md) {
-    padding-bottom: rem(164);    
+    padding-bottom: rem(164);  
+    position: relative;   
   }  
+}
+
+.aboutUs__inner {
+  @include mq(md) {
+    padding: 0 rem(94);
+  }
 }
 
 .aboutUs__contain {
@@ -111,3 +118,15 @@
     right: 13%;
   }
 }
+
+.aboutUs__decoration {
+  display: none;
+  @include mq(md) {
+    display: block;
+    position: absolute;
+    width: rem(184);
+    right: calc(50% - min(48vw,rem(664)));
+    bottom: rem(-88);
+  }
+}
+

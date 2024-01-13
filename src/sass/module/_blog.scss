@@ -40,12 +40,11 @@
   }  
 }
 
-.blog__bottom {
-  text-align: center;
-}
-
 .blog__button { 
   margin-top: rem(40);
+  margin-right: auto;
+  margin-left: auto;  
+  // text-align: center;
   @include mq(md) {
     margin-top: rem(80);    
   }  
