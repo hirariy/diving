@@ -6,6 +6,19 @@
   }
 }
 
+.campaign__container {
+  overflow: hidden;
+}
+
+.campaign-swiper {
+  overflow: hidden;
+}
+
+.campaign__wrappre {
+  padding-bottom: rem(5);
+  transition-timing-function: linear;  
+}
+
 .campaign__button { 
   margin-top: rem(30);  
   margin-right: auto;

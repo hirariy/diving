@@ -2,28 +2,31 @@
 
 .nav-list { 
   display: flex;  
-  color: $white;
-  justify-content: space-evenly;
-  // padding: 0 rem(15);
+  color: $white;    
+  gap: 5%;
+  justify-content: space-around;
   @include mq(md) {
-    // padding: 0;
-    justify-content: center;    
-  }
+    gap: rem(128);
+  } 
 }
 
 .nav-list__contents-left,
 .nav-list__contents-right { 
   @include mq(md) {
     display: flex;
+    gap: rem(48);
+    width: 50%;
+    justify-content: space-between;
   }
 }
 
-.nav-list__items {
-  // width: 23.2vw;
-  width: rem(162);
-  gap: 20px;
+.nav-list__items {  
+  max-width: rem(162);
+  // width: 100%;
+  // gap: 20px;
   @include mq(md) {
-    width: rem(283);
+    max-width: rem(283);
+    // width: 100%;
   }
 }
 

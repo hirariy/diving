@@ -30,10 +30,10 @@
 
 .aboutUs__figure-left {
     aspect-ratio: 194 / 128;       
-    max-width: 100%;     
+    max-width: 37.1%;     
     margin-bottom: rem(18);
     position: relative;    
-    width: 37.1%;   
+    width: 100%;   
     @include mq(md) {
       aspect-ratio: 606 / 400;
       margin-bottom: rem(55);      
@@ -49,8 +49,9 @@
 .aboutUs__figure-right {
     aspect-ratio:  281/ 186;    
     margin-top: rem(26);
-    margin-left: rem(-60); 
-    width: 81%;       
+    margin-left: rem(-60);
+    max-width: 81%; 
+    width: 100%;       
     z-index: -1;
     @include mq(md) {
       aspect-ratio:  880/ 581;
@@ -60,9 +61,9 @@
 }
 
 .aboutUs__figure-right img {    
-    height: 100%;
-    object-fit: cover;    
+    height: 100%;       
     width: 100%;
+    object-fit: cover; 
 }
 
 .aboutUs__contain__copy-box {

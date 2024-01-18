@@ -4,6 +4,9 @@
   padding-top: rem(100);
   padding-bottom: rem(100);
   background: $green2;
+  @include mq(md) {
+    position: relative;
+  }
 }
 
 .price__container {
@@ -95,4 +98,15 @@
   @include mq(md) {
     margin-top: rem(80);    
   }  
+}
+
+.price__decoration {
+  display: none;
+  @include mq(md) {
+    display: block;
+    position: absolute;
+    width: rem(437);
+    left: calc(50% - min(48vw,rem(640)));
+    bottom: rem(56);
+  }
 }

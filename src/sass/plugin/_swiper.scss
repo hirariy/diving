@@ -12,14 +12,15 @@
   margin: 0 calc(50% - 50vw); 
 }
 
-.swiper-wrapper {
-    transition-timing-function: linear;
-    // gap: rem(20);   
-    padding-bottom: rem(10); 
-    @include mq(md) {
-      // gap: rem(40);
-    }    
-}
+
+// .swiper-wrapper {
+//     transition-timing-function: linear;
+//     // gap: rem(20);   
+//     padding-bottom: rem(10); 
+//     @include mq(md) {
+//       // gap: rem(40);
+//     }    
+// }
 
 .swiper-button-prev {
   display: none;

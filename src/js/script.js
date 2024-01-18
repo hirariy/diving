@@ -42,22 +42,15 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
 
   const swiper = new Swiper('.swiper', {
     loop: true,
-    slidesPerView: 1.35,    
+    slidesPerView: "auto",    
     spaceBetween: 24,
     centeredSlides: true,
-    breakpoints: {
-      670: {           
-        slidesPerView: 2.5,       
-      },
-      768: {         
-        slidesPerView: 3.49,      
-      },
-      1137: {
-        slidesPerView: 4,
+    breakpoints: {      
+      768: {        
         spaceBetween: 40,
       }
-    },    
-    speed: 6000,
+    },  
+        speed: 6000,
     allowTouchMove: false,
     autoplay: {
       delay: 0,
