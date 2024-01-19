@@ -50,15 +50,19 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
         spaceBetween: 40,
       }
     },  
-        speed: 6000,
-    allowTouchMove: false,
-    autoplay: {
-      delay: 0,
+    // speed: 6000,
+    // allowTouchMove: false,
+    // autoplay: {
+    //   delay: 0,
+    // },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
     },
    }); 
   
 
-//.color boxの付いた全ての要素に対して下記の処理を行う
+//.colorBoxの付いた全ての要素に対して下記の処理を行う
 box.each(function(){
     $(this).append('<div class="color"></div>')
     var color = $(this).find($('.color')),
