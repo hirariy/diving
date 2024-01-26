@@ -23,19 +23,25 @@
   align-items: center;
   padding: 0 rem(15);
   @include mq(md){
-    padding: 0 rem(30);    
+    padding: 0 rem(21);    
   }
 }
 
 .header__logo {
-  width: rem(102); 
+  width: rem(106); 
   display: inline-block; 
+  margin-top: rem(5);
+  margin-left: rem(-2);
+  
+  
   @include mq(md) {
-    width: rem(133);
+    width: rem(141);
+    padding-top: rem(7);
+    margin-left: rem(-2);    
   }
 }
 
-.header__drawer { //ドロワーメニュー非表示
+.header__drawer {   
   @include mq(md) {
     display: none;
   }

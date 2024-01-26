@@ -1,7 +1,7 @@
 @use "global" as *;
 
 .aboutUs {
-  padding-bottom: rem(70);
+  padding-bottom: rem(73);
   @include mq(md) {
     padding-bottom: rem(164);  
     position: relative;   
@@ -9,28 +9,45 @@
 }
 
 .aboutUs__inner {
+  max-width: rem(1180);
+  margin-right: auto;
+  margin-left: auto;  
+  padding: 0 rem(15);
   @include mq(md) {
-    padding: 0 rem(94);
+    padding: 0 rem(45);
   }
 }
 
+.aboutUs .aboutUs__engTitle { 
+  @include mq(md) {
+    padding-right: rem(14);  
+  } 
+}
+.aboutUs .aboutUs__jaTitle { 
+  line-height: 1.5;  
+  @include mq(md) {   
+   padding-right: rem(16);  
+   line-height: 1.6;
+  }  
+}
+
 .aboutUs__contain {
-  position: relative;      
+  position: relative; 
+  margin-top: rem(29); 
+  @include mq(md) {
+    margin-top: rem(40);    
+  }     
 }
 
 .aboutUs__figure {
   display: flex;  
-  max-width: rem(1130);
-  margin-top: rem(24);
-  position: relative;  
-  @include mq(md) {
-    margin-top: rem(40);    
-  }  
+  max-width: rem(1130); 
+  position: relative;     
 }
 
 .aboutUs__figure-left {
     aspect-ratio: 194 / 128;       
-    max-width: 37.1%;     
+    max-width: 36.4%;     
     margin-bottom: rem(18);
     position: relative;    
     width: 100%;   
@@ -49,14 +66,14 @@
 .aboutUs__figure-right {
     aspect-ratio:  281/ 186;    
     margin-top: rem(26);
-    margin-left: rem(-60);
-    max-width: 81%; 
+    margin-left: rem(-62);
+    max-width: 80.8%; 
     width: 100%;       
     z-index: -1;
     @include mq(md) {
       aspect-ratio:  880/ 581;
-      margin-top: rem(120);
-      margin-left: rem(-193);      
+      margin-top: rem(80);
+      margin-left: rem(-199);      
     }
 }
 
@@ -86,8 +103,8 @@
     margin-right: auto;
     margin-left: auto;    
     position: absolute;
-    top: 34%;   
-    right: 6.8%;     
+    top: 30.1%;   
+    right: 4.9%;     
     width: 100%;
   }
 }
@@ -96,13 +113,11 @@
   color: $black;
   font-family: $ja-font-family;
   font-size: rem(16);
-  font-style: normal;
   font-weight: $normal;
   line-height: calc(24/ 16); 
   margin-top: rem(16);  
   @include mq(md) {
     color: $white;
-    letter-spacing: 0.05em;
     max-width: rem(400);
     margin-top: 0;    
     margin-left: rem(40);    
@@ -110,13 +125,14 @@
 }
 
 .aboutUs__button {
-  margin-top: rem(50);
-  margin-right: auto;
-  margin-left: auto;  
+  margin-top: rem(51);
+  margin-right: rem(18);
+  
+  text-align: center; 
   @include mq(md) {
     position: absolute;
-    bottom: 31%;
-    right: 13%;
+    bottom: 33.8%;
+    right: 14.1%;
   }
 }
 
@@ -125,9 +141,9 @@
   @include mq(md) {
     display: block;
     position: absolute;
-    width: rem(184);
-    right: calc(50% - min(48vw,rem(664)));
-    bottom: rem(-88);
+    width: rem(194);
+    right: calc(50% - min(48vw,rem(630)));
+    bottom: rem(-89);
   }
 }
 

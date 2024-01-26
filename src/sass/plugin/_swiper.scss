@@ -1,12 +1,5 @@
 @use "global" as *;
 
-.swiper-container {
-  margin-top: rem(20);  
-  @include mq(md) {
-    margin-top: rem(80);   
-  }  
-}
-
 .swiper {
   width: 100vw;
   margin: 0 calc(50% - 50vw); 
@@ -19,7 +12,7 @@
   @include mq(md) {
     display: block;
     position: absolute;
-    top: 3%;   
+    top: 2.5%;   
     height: rem(80);
     width: rem(80);
 }
@@ -27,13 +20,13 @@
 
 .swiper-button-prev {
   @include mq(md) {    
-    left: calc(50% - min(48vw,rem(-284)));
+    left: calc(50% - min(48vw,rem(-292)));
   }
 }
 
 .swiper-button-next {
   @include mq(md) {
-    right:calc(50% - min(48vw,rem(532)));
+    right:calc(50% - min(48vw,rem(531.5)));
   }
 }
 /* 前へ次への矢印カスタマイズ */
@@ -44,6 +37,9 @@
   background-size: contain;
   content: "";  
   // margin: auto; 
+  width: rem(80);
+  height: rem(80);
+  display: block;
   }  
 }
 /* 前への矢印カスタマイズ */

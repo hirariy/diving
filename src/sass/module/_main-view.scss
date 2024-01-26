@@ -7,14 +7,17 @@
   position: relative;
 }
 
-.main-view__titles {
+.main-view__titles {  
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 50.1%;
+  left: 52.5%;
   transform: translate(-50%, -50%);
   text-align: center;
   color: $white; 
   margin: auto; 
+  @include mq(md) {
+    left: 50.9%;
+  }
 }
 
 .main-view__title { 
@@ -23,11 +26,12 @@
   font-size: rem(40);
   font-style: normal;
   font-weight: $normal;
-  line-height: 125%;
-  letter-spacing: rem(21.6);
+  line-height: 1.2;
+  letter-spacing: rem(21);
   @include mq(md) {
     font-size: rem(80);
-    letter-spacing: rem(43.2);    
+    letter-spacing: 0.53em; 
+    line-height: 1.25;   
   }
 }
 
@@ -37,5 +41,10 @@
   font-size: rem(20);
   font-style: normal;
   font-weight: $normal;
-  line-height: normal;
+  line-height: 1.7;  
+  padding-right: rem(22);
+  @include mq(md) {
+    padding-right: rem(44);
+  }
 }
+

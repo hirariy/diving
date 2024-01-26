@@ -3,10 +3,18 @@
 .nav-list { 
   display: flex;  
   color: $white;    
-  gap: 5%;
-  justify-content: space-around;
+  gap: 4.8%;  
+  padding-left: calc(50% - min(48vw, rem(166)));
+  margin-top: rem(40);  
+  margin-left: rem(-6);
   @include mq(md) {
-    gap: rem(128);
+    justify-content: space-around;
+    gap: rem(31);
+    max-width: rem(1080);
+    width: 100%;
+    padding-left:0;
+    margin-left: rem(13);
+    margin-top: rem(12);    
   } 
 }
 
@@ -14,19 +22,28 @@
 .nav-list__contents-right { 
   @include mq(md) {
     display: flex;
-    gap: rem(48);
-    width: 50%;
-    justify-content: space-between;
+    gap: rem(117);
+    width: 50%; 
   }
 }
 
-.nav-list__items {  
-  max-width: rem(162);
-  // width: 100%;
-  // gap: 20px;
+.nav-list__contents-left {
+  margin-left: rem(-4);
   @include mq(md) {
-    max-width: rem(283);
-    // width: 100%;
+    margin-left: 0;    
+  }  
+}
+.nav-list__contents-right {
+  margin-left: rem(5);
+  @include mq(md) {
+    margin-left: 0;    
+  }  
+}
+
+.nav-list__items {  
+  max-width: rem(162); 
+  @include mq(md) {
+    max-width: rem(283);  
   }
 }
 
@@ -35,23 +52,28 @@
   background: url(../../../assets/images/common/hitode.png) no-repeat;
   background-size: 90%;
   display: inline-block; 
-  width: rem(18);
-  height: rem(18);
+  width: rem(20);
+  height: rem(20);
   vertical-align: middle;
-  margin-right: rem(4);
+  margin-right: rem(3);
+  background-position: rem(0.7) rem(-2);
 }
 
 .nav-list__item::before {
   content: ""; 
   display: inline-block;  
-  width: rem(18);
-  height: rem(18);
+  width: rem(20);
+  height: rem(20);
   vertical-align: middle;
-  margin-right: rem(4);
+  margin-right: rem(7);
+  @include mq(md) {
+    margin-right: rem(5);
+  }
 }
 
-
-
+.nav-list__items-list {
+  margin-bottom: rem(37);  
+}
 
 .nav-list__item-title {
   color: $white;
@@ -60,9 +82,14 @@
   font-style: normal;
   font-weight: $bold;
   line-height: calc(18/ 16); 
-  margin-top: rem(40);
   text-indent: rem(-22);
-  padding-left: rem(25);
+  padding-left: rem(25);  
+  transition: opacity 0.5s ease;
+}
+
+.nav-list__item-title:hover {
+  opacity: 0.7;  
+  transition: opacity 0.5s ease;
 }
 
 .nav-list__item {    
@@ -71,8 +98,20 @@
   font-size: rem(16);
   font-style: normal;
   font-weight: $normal;
-  line-height: calc(18/ 16);  
-  margin-top: rem(24);  
+  line-height: 1;    
   white-space:nowrap;
+  margin-top: rem(22);  
+  transition: opacity 0.5s ease; 
+  @include mq(md) {
+    line-height: 0.9;    
+  }
 }
 
+.nav-list__item:not(:first-child) {
+  gap: 0;
+}
+
+.nav-list__item:hover {
+  opacity: 0.7;
+  transition: opacity 0.5s ease;
+}

@@ -11,7 +11,7 @@
   font-style: normal;
   font-weight: $normal;
   line-height: 150%; /* 150% */
-  margin-top: rem(8);  
+  margin-top: rem(8);    
 }
 
 .section-header__engTitle {
@@ -22,7 +22,7 @@
   font-weight: $normal;
   line-height: 1;
   @include mq(md) {
-    font-size: rem(40);
+    font-size: rem(40); 
   }
 } 
 

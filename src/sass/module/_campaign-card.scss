@@ -1,12 +1,15 @@
 @use "global" as *;
 
 .campaign__card {
-  width: rem(333);
+  width: rem(280);
+  @include mq(md) {
+    width: rem(333);
+  }  
 }
 
 .campaign-card {
   display: inline-block;
-  box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.25);
+  box-shadow:  rem(2) rem(2) rem(10) rem(0) rgba(0, 0, 0, 0.25);
 }
 
 .campaign-card__img {
@@ -27,16 +30,15 @@
 }
 
 .campaign-card__body {
-  margin-top: rem(16);
-  margin-bottom: rem(26);
-  padding-right: rem(16);
-  padding-left: rem(16);  
+  margin-top: rem(15);  
+  margin-bottom: rem(16); 
+  padding-right: rem(16); 
+  padding-left: rem(16);    
   @include mq(md) {
-    margin-top: rem(24);
-    margin-bottom: rem(40); 
+    margin-top: rem(23);
+    margin-bottom: rem(31); 
     padding-right: rem(16);
     padding-left: rem(16);
-
   }  
 }
 
@@ -47,16 +49,17 @@
   font-size: rem(12);
   font-style: normal;
   font-weight: $normal;
-  border: 1px solid $green;
-  line-height: calc(22/ 12); 
-  padding: rem(4) rem(12);
+  border: rem(1) solid $green;
+  line-height: rem(21); 
+  padding: rem(4) rem(11);
+  letter-spacing: -0.001em;
   @include mq(md) {
     padding: rem(6) rem(16);
   }
 }
 
 .campaign-card__title {
-  border-bottom: 1px solid $green;
+  border-bottom: rem(1) solid $green;
   margin-top: rem(4);
   padding-bottom: rem(8); 
   color: $black;
@@ -75,19 +78,23 @@
   font-size: rem(14);
   font-style: normal;
   font-weight: $normal;
-  line-height: calc(24/ 14); 
+  line-height: 1.7;  
   @include mq(md) {
-    margin-top: rem(16);    
+    margin-top: rem(16);   
+    padding-right: rem(11); 
+    letter-spacing: 0.13em;
   }  
 }
 
-.campaign-card__info {
+.campaign-card__info {  
   margin-top: rem(8);
   display: flex;  
   justify-content: center;
   align-items: center;
-  padding-left: rem(19);
-  padding-right: rem(18);  
+  @include mq(md) {
+    padding-left: rem(19);
+    padding-right: rem(18); 
+  }   
 }
 
 .campaign-card__price {
@@ -96,22 +103,25 @@
   font-size: rem(20);
   font-style: normal;
   font-weight: $bold;
-  line-height: 1; /* 100% */
+  line-height: 1.95; /* 100% */
   text-decoration: line-through rem(3) solid #C94800;
   @include mq(md) {
     font-size: rem(24);
+    line-height: 2; /* 100% */
   }
 }
 
 .campaign-card__new-price {
-  margin-left: rem(25);  
+  margin-left: rem(18);  
   color: $green;
   font-family: $en-font2-family;
   font-size: rem(32);
   font-style: normal;
   font-weight: $bold;
-  line-height: 1; 
+  line-height: 0;
+  padding-bottom: rem(10);   
   @include mq(md) {    
     font-size: clamp(rem(32),3vw, rem(40));
+    margin-left: rem(25); 
   }
 }

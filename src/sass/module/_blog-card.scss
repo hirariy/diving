@@ -1,9 +1,9 @@
 @use "global" as *;
 
-.blog-card {
-  box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.25);  
+.blog-card {  
+  box-shadow:  rem(2) rem(2) rem(10) rem(0)  rgba(0, 0, 0, 0.25);  
   background-color: $white;
-  width: 88%;
+  width: 97%;
   display: inline-block;
   margin-right: auto;
   margin-left: auto; 
@@ -28,17 +28,26 @@
 }
 
 .blog-card__text-body {
-  text-align: left;
+  text-align: left; 
+  padding-bottom: rem(8);
+  margin-top: rem(16);
+  @include mq(md) {
+    margin-top: rem(17);
+  }  
 }
 
 .blog-card__date {
   margin-top: rem(24); 
+  margin-left: rem(1);
   color: $black;
   font-family: $en-font-family;
   font-size: rem(12);
   font-style: normal;
   font-weight: $normal;
   line-height: calc(18/ 12); 
+  @include mq(md) {
+    margin-left: 0;    
+  }
 }
 
 .blog-card__title {
@@ -47,7 +56,16 @@
   font-size: rem(16);
   font-style: normal;
   font-weight: 500;
-  line-height: calc(24/ 16);
-  border-bottom: 1px solid #408F95;
+  line-height: 1.6;
+  border-bottom: rem(1) solid #408F95;
+  padding-bottom: rem(2);
+  
 }
-
+ .blog-card__text {
+  color: $black;
+  font-family: $ja-font-family;
+  font-size: rem(16); 
+  font-weight: $normal;
+  line-height: 1.5; /* 150% */
+  margin-top: rem(16); 
+ }

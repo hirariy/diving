@@ -1,7 +1,7 @@
 @use "global" as *;
 
 .section-blog {
-  margin-top: rem(80);
+  margin-top: rem(86);
   @include mq(md) {
     margin-top: 0;
     padding-top: rem(100);    
