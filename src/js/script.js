@@ -53,11 +53,14 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     },  
     speed: 6000,
     allowTouchMove: false,
-    // 
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
     },
+    autoplay: {
+      delay: 0, // 767px以下の画面幅でautoplayの遅延時間
+    },
+  });
   });
    
 //要素の取得とスピードの設定
@@ -84,4 +87,3 @@ box.each(function(){
           }
     });
   })
-})
