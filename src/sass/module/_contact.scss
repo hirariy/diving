@@ -4,20 +4,20 @@
   position: relative;
   padding-bottom: rem(104);  
   @include mq(md) {
-    padding-bottom: rem(162);    
+    padding-bottom: rem(160);    
   }
 }
 
 .contact__contents {  
   text-align: center;
   @include mq(md) {   
-    padding-top: rem(83);
-    padding-bottom: rem(80);    
+    padding-top: rem(81);
+    padding-bottom: rem(74);    
     display: flex;   
     justify-content: space-around;
     background: #FFF;
     box-shadow: rem(4) rem(4) rem(10) 0 rgba(0, 0, 0, 0.25);
-    max-width: rem(1067);
+    max-width: rem(1080);
     margin-right: auto;
     margin-left: auto;    
   }
@@ -25,9 +25,8 @@
 
 .contact__left-content {
   @include mq(md) {
-    position: relative; 
-    // max-width: rem(440);     
-    width: 48%; 
+    position: relative;     
+    width: 50%; 
   }
 }
 
@@ -35,7 +34,7 @@
   @include mq(md) {
     position: absolute; 
     top: 0;
-    left: 108.5%;
+    left: 108%;
     margin: 0 rem(1);
     content: "";
     width: rem(1);
@@ -50,7 +49,8 @@
   width: rem(174);
   position: relative;
   @include mq(md) {
-    width: rem(200);        
+    width: rem(200); 
+    margin-left: rem(13);          
   }
 }
 
@@ -80,9 +80,9 @@
   margin-top: rem(8); 
   color: var(--green, #0D2936);
   @include mq(md) {
-    margin-top: rem(17);    
+    margin-top: rem(16);    
     display: flex;
-    padding-left: rem(35);    
+    padding-left: rem(50);    
   }  
 }
 
@@ -108,8 +108,7 @@
 .contact__address-body .contact-address {
   margin-right: rem(10);
   @include mq(md) {
-    margin-right: 0;
-    
+    margin-right: 0;   
   }  
 }
 
@@ -124,7 +123,7 @@
     aspect-ratio: 273 / 148;  
     margin-top: rem(2);    
     margin-left: rem(23); 
-    width: 57%;     
+    width: 56.5%;     
   }
 }
   
@@ -187,7 +186,7 @@ margin-left: rem(13);
   margin-right: rem(4);
    
   @include mq(md) {
-    margin-left: rem(9);  
+    margin-left: rem(12);  
   }
 }
 
@@ -197,8 +196,8 @@ margin-left: rem(13);
   right: calc(50% - min(46vw,rem(174)));
     top: rem(-26);
   @include mq(md) {     
-    width: rem(308);
-    right: calc(50% - min(48vw,rem(665)));
-    top: rem(-36);
+    width: rem(310);
+    right: calc(50% - min(48vw,rem(675)));
+    top: rem(-40);
   }
 }

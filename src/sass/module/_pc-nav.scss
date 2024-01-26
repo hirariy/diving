@@ -6,6 +6,10 @@
   gap: rem(15);
   height: inherit;
   margin-right: rem(19);   
+  @include mq(md) {
+    margin-right: rem(2);   
+    margin-top: rem(2);   
+  }
 }
 
 .pc-nav__item a {

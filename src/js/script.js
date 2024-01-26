@@ -53,9 +53,7 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     },  
     speed: 6000,
     allowTouchMove: false,
-    autoplay: {
-      delay: 0,
-    },
+    // 
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",

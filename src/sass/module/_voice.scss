@@ -10,28 +10,24 @@
 
 
 .voice .voice__engTitle {    
-  letter-spacing: 0.02em;
-  @include mq(md) {
-    margin-right: rem(17);  
-  }
+  letter-spacing: 0.02em; 
 }
 .voice .voice__jaTitle {
   line-height: 1.5;
   margin-right: rem(1);
   
   @include mq(md) {
-    line-height: 1.6;
-    margin-right: rem(19);
+    line-height: 1.6;    
   }
 }
 
 .voice__cards {
   margin-top: rem(44);
   @include mq(md) {
-    margin-top: rem(32);
+    margin-top: rem(28);
     display: flex;  
     max-width: rem(1080);
-    margin-left: rem(16);      
+    margin-left: rem(25);      
   }  
 }
 
@@ -40,8 +36,7 @@
   margin-right: rem(3);  
   text-align: center; 
   @include mq(md) {
-    margin-top: rem(80.5); 
-    margin-right: rem(21);       
+    margin-top: rem(80.5);      
   }  
 }
 
@@ -51,7 +46,7 @@
     display: block;
     position: absolute;
     width: rem(301);
-    left: calc(50% - min(48vw,rem(628)));
+    left: calc(50% - min(48vw,rem(620)));
     top: rem(-120);
   }
 }
@@ -61,8 +56,8 @@
     display: block;
     position: absolute;
     width: rem(71);
-    right: calc(50% - min(48vw,rem(532)));
-    bottom: rem(-71);
+    right: calc(50% - min(48vw,rem(540)));
+    bottom: rem(72);
     z-index: 5;
   }
 }

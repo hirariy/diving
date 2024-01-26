@@ -16,8 +16,7 @@
 .blog .blog__engTitle {  
   margin-right: rem(2);  
   @include mq(md) {
-    color: $white;
-    padding-right: rem(18);  
+    color: $white;  
   }
 }
 .blog .blog__jaTitle {  
@@ -25,8 +24,7 @@
   margin-top: rem(7);
   margin-right: rem(3);   
   @include mq(md) {
-    color: $white;
-    padding-right: rem(19);
+    color: $white;    
   }
 }
 
@@ -43,7 +41,7 @@
     display: flex; 
     width: 95.5%;
     margin-top: rem(78);   
-    margin-left: rem(16);    
+    margin-left: rem(25);    
   }  
 }
 
@@ -66,7 +64,7 @@
   text-align: center;
   @include mq(md) {
     margin-top: rem(80); 
-    padding-right: rem(22.5);      
+    padding-right: rem(2);      
   }  
 }
 
@@ -76,7 +74,7 @@
     display: block;
     position: absolute;
     width: rem(438);
-    left: calc(50% - min(48vw,rem(629.5)));
+    left: calc(50% - min(48vw,rem(620.5)));
     top: rem(23.5);
   }
 }

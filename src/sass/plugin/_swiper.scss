@@ -20,13 +20,13 @@
 
 .swiper-button-prev {
   @include mq(md) {    
-    left: calc(50% - min(48vw,rem(-292)));
+    left: calc(50% - min(48vw,rem(-300)));
   }
 }
 
 .swiper-button-next {
   @include mq(md) {
-    right:calc(50% - min(48vw,rem(531.5)));
+    right:calc(50% - min(48vw,rem(540)));
   }
 }
 /* 前へ次への矢印カスタマイズ */

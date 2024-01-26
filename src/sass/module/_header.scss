@@ -23,7 +23,9 @@
   align-items: center;
   padding: 0 rem(15);
   @include mq(md){
-    padding: 0 rem(21);    
+    padding: 0 rem(38);    
+    margin-top: rem(-2);
+    
   }
 }
 

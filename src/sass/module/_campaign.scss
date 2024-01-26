@@ -7,16 +7,10 @@
 }
 
 .campaign .campaign__entitle {
-  line-height: 0.68;
-  @include mq(md) {  
-  padding-right: rem(15);  
-  }
+  line-height: 0.68;  
 }
 .campaign .campaign__jatitle {
-  line-height: 2.5;
-  @include mq(md) {
-    padding-right: rem(17);  
-  } 
+  line-height: 2.5;  
 }
 
 .campaign__container {

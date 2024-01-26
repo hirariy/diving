@@ -7,19 +7,19 @@
   @include mq(md) {
     position: relative;
     padding-top: rem(100);
-    padding-bottom: rem(100);
+    padding-bottom: rem(102);
   }
 }
 
 .price .price__engTitle {
   @include mq(md) {
-    margin-right: rem(23);   
+    margin-right: rem(5);   
   } 
 }
 
 .price .price__jaTitle {
   @include mq(md) {
-    margin-right: rem(23);  
+    margin-right: rem(6);  
   } 
 }
 
@@ -40,7 +40,8 @@
     aspect-ratio: 746 / 492; 
     height: rem(746);
     width: 45%;  
-    margin-left: rem(72);    
+    margin-left: rem(81);
+    margin-right: rem(-9);        
   }
 }
 .price__image img {
@@ -56,8 +57,8 @@
     margin-top: 0; 
     width: 48%;  
     padding-bottom: rem(98);
-    padding-right: rem(20);
-    padding-left: rem(13);         
+    padding-right: rem(12);
+    padding-left: rem(21);         
   }  
 }
 
@@ -90,7 +91,7 @@
   
   @include mq(md) {
     font-size: rem(16);
-    line-height: calc(24/ 16);
+    line-height: 1.51;
   }
 }
 
@@ -112,9 +113,7 @@
   text-align: center; 
   margin-right: rem(4);  
     @include mq(md) {
-    margin-top: rem(80);  
-    margin-right: rem(21);
-      
+    margin-top: rem(80);       
   }  
 }
 
@@ -123,8 +122,8 @@
   @include mq(md) {
     display: block;
     position: absolute;
-    width: rem(440);
-    left: calc(50% - min(48vw,rem(630)));
-    bottom: rem(56);
+    width: rem(437);
+    left: calc(50% - min(48vw,rem(620)));
+    bottom: rem(59);
   }
 }
