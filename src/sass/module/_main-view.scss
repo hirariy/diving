@@ -2,9 +2,18 @@
 
 .main-view {
   height: 100vh;
-  object-fit: cover;
-  object-position: center;
   position: relative;
+}
+
+.main-view-swiper {
+  height: inherit;
+}
+
+.main-view__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  vertical-align: top;
 }
 
 .main-view__titles {  
@@ -15,6 +24,7 @@
   text-align: center;
   color: $white; 
   margin: auto; 
+  z-index: 1;
   @include mq(md) {
     left: 51.5%;
   }

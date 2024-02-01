@@ -8,6 +8,12 @@
   }    
 }
 
+// .voice__inner {
+//   max-width: rem(600);
+//   // @include mq(md) {
+//   //   max-width: 100%;
+//   // }
+// }
 
 .voice .voice__engTitle {    
   letter-spacing: 0.02em; 
@@ -27,7 +33,10 @@
     margin-top: rem(28);
     display: flex;  
     max-width: rem(1080);
-    margin-left: rem(25);      
+    margin-right: auto;
+    margin-left: auto;
+    flex-wrap: wrap;
+    gap: rem(40);    
   }  
 }
 

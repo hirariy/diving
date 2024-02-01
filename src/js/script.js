@@ -16,52 +16,85 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
   });
 
   // ヘッダークラスの付与
-  let header = $('.p-header');
-  let headerHeight = $('.p-header').height();
-  let height = $('.p-mv').height();  
-  $(window).scroll(function() {
-    if($(this).scrollTop() > height - headerHeight) {
-      header.addClass('is-color');      
-    } else {
-      header.removeClass('is-color');
-    }  
-  });
+  // let header = $('.header');
+  // let headerHeight = $('.header').height();
+  // let height = $('.mv').height();  
+  // $(window).scroll(function() {
+  //   if($(this).scrollTop() > height - headerHeight) {
+  //     header.addClass('is-color');      
+  //   } else {
+  //     header.removeClass('is-color');
+  //   }  
+  // });
   
-  //ドロワーメニュー
+   //ドロワーメニュー
+
+  // ウィンドウがロードされたときとリサイズされたときに実行される関数
+function handleResize() {
+  var windowWidth = $(window).width(); // 現在のウィンドウの幅を取得
+
+  if (windowWidth >= 767) {
+    $(".js-sp-nav").fadeOut(300); // 768px以上なら非表示にする
+    $(".js-hamburger").removeClass('is-active'); // ハンバーガーアイコンからis-activeクラスを削除する
+  }
+}
+
+// ウィンドウのロード時に実行
+$(document).ready(function () {
+  handleResize(); // 関数を初回実行
+
+  // ウィンドウのリサイズ時に実行
+  $(window).resize(function () {
+    handleResize(); // 関数を実行
+  });
+
+  // ハンバーガーアイコンがクリックされたときの処理
   $(".js-hamburger").click(function () {
-    if($(".js-hamburger").hasClass('is-active')) {
+    if ($(".js-hamburger").hasClass('is-active')) {
       $(".js-hamburger").removeClass('is-active');
       $(".js-sp-nav").fadeOut(300);
     } else {
       $(".js-hamburger").addClass('is-active');
-      $(".js-sp-nav").fadeIn(300); 
-    };
+      $(".js-sp-nav").fadeIn(300);
+    }
   });
+});
   
   // swiper
+    var mySwiper = new Swiper(".mySwiper", {
+      spaceBetween: 30,
+      effect: "fade",
+      speed: 6000,
+      allowTouchMove: false,     
+      // autoplay: {
+      //   delay: 0, // 767px以下の画面幅でautoplayの遅延時間
+      // },      
+    });
 
-  const swiper = new Swiper('.swiper', {
+  const campaignSwiper = new Swiper('.campaignSwiper', {
     loop: true,
     slidesPerView: "auto",    
     spaceBetween: 24,
     centeredSlides: true,
     breakpoints: {      
-      768: {        
+      768: { 
+        speed: 1000,       
         spaceBetween: 40,
         autoplay: false, // 768px以上ではautoplayを無効に
       },
-    },  
+    },     
     speed: 6000,
     allowTouchMove: false,
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
     },
-    autoplay: {
-      delay: 0, // 767px以下の画面幅でautoplayの遅延時間
-    },
+    // autoplay: {
+    //   delay: 0, // 767px以下の画面幅でautoplayの遅延時間
+    // },
   });
   });
+  
    
 //要素の取得とスピードの設定
 var box = $('.colorbox'),

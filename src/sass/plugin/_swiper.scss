@@ -45,13 +45,13 @@
 /* 前への矢印カスタマイズ */
 .swiper-button-prev::after {
   @include mq(md) {
-    background-image: url('../../../../assets/images/common/swiper-btn-L.png');
+    background-image: url('../../assets/images/common/swiper-btn-L.png');
   }  
 }
 /* 次への矢印カスタマイズ */
 .swiper-button-next::after {
   @include mq(md) {
-    background-image: url('../../../../assets/images/common/swiper-btn-R.png');
+    background-image: url('../../assets/images/common/swiper-btn-R.png');
   }  
 }
 /* 画像サイズ調整 */
@@ -59,15 +59,9 @@
 
 .swiper-button img {
   @include mq(md) {
-        height: auto;
-        width: 100%;
-      }
-}
-
-.swiper-slide img {
-  @include mq(md) {
     height: auto;
     width: 100%;
   }
 }
+
 

@@ -12,10 +12,6 @@
   }
 }
 
-.header.is-color {  
-  background: rgba(13, 41, 54, 0.68);
-}
-
 .header__inner {
   height: inherit;
   display: flex;
@@ -24,8 +20,7 @@
   padding: 0 rem(15);
   @include mq(md){
     padding: 0 rem(38);    
-    margin-top: rem(-2);
-    
+    // margin-top: rem(-2);    
   }
 }
 
@@ -33,9 +28,7 @@
   width: rem(106); 
   display: inline-block; 
   margin-top: rem(5);
-  margin-left: rem(-2);
-  
-  
+  margin-left: rem(-2);  
   @include mq(md) {
     width: rem(141);
     padding-top: rem(7);

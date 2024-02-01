@@ -3,19 +3,15 @@
 .voice-card {
   box-shadow: rem(2) rem(2) rem(10) rem(0) rgba(0, 0, 0, 0.25);
   padding: rem(15) rem(16) rem(23);
+  width: 100%;
     @include mq(md) {
     padding: rem(24);
-  }
-}
-
-.voice-card:not(:first-child) {
-  @include mq(md) {
-    margin-left: rem(40);    
+    width: 48%; 
   }
 }
 
 .voice-card + .voice-card {
-  margin-top: rem(41);
+  margin-top: rem(40);
   @include mq(md) {
     margin-top: 0;    
   }  
@@ -23,17 +19,12 @@
 
 .voice-card__header {
   display: flex;
-  align-items: center;
-  @include mq(md) {
-    align-items: flex-end;    
-  }  
+  align-items: flex-end; 
 }
 
-.voice-card__header-text { 
-  @include mq(md) {
-    width: 59%; 
-    margin-top: rem(24);         
-  }
+.voice-card__header-text {  
+  width: 60%; 
+  // margin-top: rem(24);
 }
 
 .voice-card__top {  
@@ -86,13 +77,13 @@
 
 .voice-card__image {
   margin-left: rem(11);
-  margin-bottom: rem(-9);  
+  // margin-bottom: rem(-9);  
   aspect-ratio: 151 / 117;
-  width: 100%;
+  width: 40%;
   @include mq(md) {
     margin-left: rem(14);    
-    width: 38.5%;
-    margin-bottom: 0;    
+    width: 40%;
+    // margin-bottom: 0;    
   }  
 }
 

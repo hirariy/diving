@@ -15,14 +15,16 @@
 
 .campaign__container {
   overflow: hidden;
-  margin-top: rem(22);  
+  margin-top: rem(22);   
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
   @include mq(md) {
     margin-top: rem(36);   
   }  
 }
 
 .campaign-swiper {
-  overflow: hidden;
+  overflow: hidden;  
 }
 
 .campaign__wrapper {
