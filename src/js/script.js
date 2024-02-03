@@ -16,16 +16,16 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
   });
 
   // ヘッダークラスの付与
-  // let header = $('.header');
-  // let headerHeight = $('.header').height();
-  // let height = $('.mv').height();  
-  // $(window).scroll(function() {
-  //   if($(this).scrollTop() > height - headerHeight) {
-  //     header.addClass('is-color');      
-  //   } else {
-  //     header.removeClass('is-color');
-  //   }  
-  // });
+  let header = $('.header');
+  let headerHeight = $('.header').height();
+  let height = $('.main-view').height();  
+  $(window).scroll(function() {
+    if($(this).scrollTop() > height - headerHeight) {
+      header.addClass('is-color');      
+    } else {
+      header.removeClass('is-color');
+    }  
+  });
   
    //ドロワーメニュー
 
@@ -97,8 +97,8 @@ $(document).ready(function () {
   
    
 //要素の取得とスピードの設定
-var box = $('.colorbox'),
-    speed = 700;  
+// var box = $('.colorbox'),
+//     speed = 700;  
 //.colorBoxの付いた全ての要素に対して下記の処理を行う
 box.each(function(){
     $(this).append('<div class="color"></div>')

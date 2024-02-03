@@ -12,15 +12,21 @@
   }
 }
 
+.header.is-color {   
+  background-color: 9A9A936;  
+  z-index: 5;
+}
+
+
 .header__inner {
   height: inherit;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 rem(15);
-  @include mq(md){
-    padding: 0 rem(38);    
-    // margin-top: rem(-2);    
+  @include mq(md) {
+    padding-right: rem(16);
+    padding-left: rem(38);   
   }
 }
 

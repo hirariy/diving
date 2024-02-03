@@ -2,14 +2,9 @@
 
 .pc-nav__items {
   display: flex;
-  align-items: center;
   gap: rem(15);
   height: inherit;
-  margin-right: rem(19);   
-  @include mq(md) {
-    margin-right: rem(2);   
-    margin-top: rem(2);   
-  }
+  margin-right: rem(12);   
 }
 
 .pc-nav__item {
@@ -43,11 +38,3 @@
   line-height: calc(15 / 10);  
   margin-top: rem(4);  
 }
-
-// .pc-nav__item:first-child a {
-//   padding-left: 0;
-// }
-// .pc-nav__item:last-child a {
-//   padding-right: 0;
-//   height: inherit;
-// }

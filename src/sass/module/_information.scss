@@ -11,11 +11,23 @@
   }
 }
 
+.information___engTitle {
+  @include mq(md) {
+    margin-right: rem(8);
+  } 
+}
+
+.information___jaTitle {
+  @include mq(md) {
+    margin-right: rem(8);
+  }
+}
+
 .information__content {
   margin-top: rem(28);
   @include mq(md) {
     display: flex;
-    margin-top: rem(38); 
+    margin-top: rem(41); 
   }  
 }
 
@@ -25,6 +37,7 @@
   @include mq(md) {
     aspect-ratio: 540/ 356;
     width: 50%;
+    margin-left: rem(-3);    
   } 
 }
   
@@ -37,6 +50,8 @@
 .information__content-body {
   @include mq(md) {   
     width: 50%;
+    margin-left: rem(2);
+    
   }   
 }
 
@@ -79,6 +94,10 @@
 
 
 .information__button {
-  margin-top: rem(40);   
-  text-align: center;   
+  margin-top: rem(41); 
+  margin-right: rem(4);    
+  text-align: center;  
+  @include mq(md) {
+    margin-top: rem(39);     
+  } 
 }

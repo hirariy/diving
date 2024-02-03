@@ -42,8 +42,8 @@
   @include mq(md) {    
     display: flex; 
     flex-wrap: wrap;
-    gap: 40px;   
-    margin-top: rem(80);     
+    gap: rem(40);   
+    margin-top: rem(78);     
   }  
 }
 
@@ -52,7 +52,7 @@
   margin-right: rem(3);  
   text-align: center;
   @include mq(md) {
-    margin-top: rem(80); 
+    margin-top: rem(81); 
     padding-right: rem(2);      
   }  
 }
