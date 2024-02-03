@@ -1,6 +1,6 @@
 @use "global" as *;
 
-.campaign__card {
+.campaign__card { 
   width: rem(280);
   height: auto;
   @include mq(md) {
@@ -12,6 +12,7 @@
   display: inline-block;
   box-shadow:  rem(2) rem(2) rem(10) rem(0) rgba(0, 0, 0, 0.25);
   height: 100%;
+  overflow: hidden;
 }
 
 .campaign-card__img {
@@ -36,7 +37,7 @@
   padding-left: rem(16);    
   @include mq(md) {
     margin-top: rem(23);
-    margin-bottom: rem(31); 
+    margin-bottom: rem(26); 
     padding-right: rem(16);
     padding-left: rem(16);
   }  

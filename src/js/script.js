@@ -66,9 +66,9 @@ $(document).ready(function () {
       effect: "fade",
       speed: 6000,
       allowTouchMove: false,     
-      // autoplay: {
-      //   delay: 0, // 767px以下の画面幅でautoplayの遅延時間
-      // },      
+      autoplay: {
+        delay: 0, // 767px以下の画面幅でautoplayの遅延時間
+      },      
     });
 
   const campaignSwiper = new Swiper('.campaignSwiper', {
@@ -76,6 +76,7 @@ $(document).ready(function () {
     slidesPerView: "auto",    
     spaceBetween: 24,
     centeredSlides: true,
+    initialSlide: 0,     
     breakpoints: {      
       768: { 
         speed: 1000,       
@@ -89,16 +90,30 @@ $(document).ready(function () {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
     },
-    // autoplay: {
-    //   delay: 0, // 767px以下の画面幅でautoplayの遅延時間
-    // },
+    autoplay: {
+      delay: 0, // 767px以下の画面幅でautoplayの遅延時間
+    },
+    on: {
+      slideChange: function () {
+        const activeCard = this.slides[this.activeIndex].querySelector('.campaign__card');
+  
+        if (activeCard) {
+          const containerWidth = this.width;
+          const cardWidth = activeCard.offsetWidth;
+          const margin = (containerWidth - cardWidth) / 2;
+  
+          activeCard.style.marginLeft = margin + 'px';
+          activeCard.style.marginRight = margin + 'px';
+        }
+      }
+    }
   });
   });
   
    
 //要素の取得とスピードの設定
-// var box = $('.colorbox'),
-//     speed = 700;  
+var box = $('.colorbox'),
+    speed = 700;  
 //.colorBoxの付いた全ての要素に対して下記の処理を行う
 box.each(function(){
     $(this).append('<div class="color"></div>')

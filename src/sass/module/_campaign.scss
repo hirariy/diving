@@ -1,14 +1,18 @@
 @use "global" as *;
 
-.campaign {
+.campaign { 
+  overflow: hidden;
+  padding-top: rem(9);  
   @include mq(md) {
     position: relative;
+    padding-top: rem(26);    
   }
 }
 
 .campaign .campaign__entitle {
   line-height: 0.68;  
 }
+
 .campaign .campaign__jatitle {
   line-height: 2.5;  
 }
@@ -28,7 +32,7 @@
 
 .campaign__wrapper {
   padding-bottom: rem(5);
-  transition-timing-function: linear;  
+  transition-timing-function: linear;   
 }
 
 .campaign__button { 

@@ -2,7 +2,7 @@
 
 .swiper {
   width: 100vw;
-  margin: 0 calc(50% - 50vw); 
+  margin: 0 calc(50% - 50vw);  
 }
 
 /* 前へ次への矢印カスタマイズ */
@@ -12,7 +12,7 @@
   @include mq(md) {
     display: block;
     position: absolute;
-    top: 2.5%;   
+    top: 6%;   
     height: rem(80);
     width: rem(80);
 }
