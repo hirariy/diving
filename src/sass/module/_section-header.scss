@@ -26,7 +26,23 @@
   }
 } 
 
-.section-header--color {
-  color: $green;  
+.section-header__engTitle::first-letter {
+  text-transform: capitalize;
+  color: $green;
 }
 
+.section-header__engTitle.section-header__engTitle--color::first-letter {
+  @include mq(md) {
+    color: $white;
+  }
+}
+
+
+.section-header__engTitle.section-header__engTitle--big {  
+  font-size: rem(80);  
+  text-align: center;
+  font-family: $en-font-family;
+  font-style: normal;
+  font-weight: $normal;
+  line-height: 1.02;   
+}

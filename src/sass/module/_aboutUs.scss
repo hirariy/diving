@@ -1,9 +1,7 @@
 @use "global" as *;
 
-.aboutUs {
-  padding-bottom: rem(73);
-  @include mq(md) {
-    padding-bottom: rem(164);  
+.aboutUs {  
+  @include mq(md) {   
     position: relative;   
   }  
 }

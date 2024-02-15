@@ -1,8 +1,10 @@
 @use "global" as *;
 
 .section-contact {
-  margin-top: rem(80);  
+  margin-top: rem(80);
+  padding-bottom: rem(104);    
   @include mq(md) {
-    margin-top: rem(140);       
+    margin-top: rem(140);   
+    padding-bottom: rem(156);        
   }  
 }

@@ -2,7 +2,9 @@
 
 .section-aboutUs {
   margin-top: rem(87); 
+  padding-bottom: rem(73);
   @include mq(md) {
-    margin-top: rem(144);    
+    margin-top: rem(144);   
+    padding-bottom: rem(164);   
   }
 }

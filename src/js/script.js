@@ -14,6 +14,7 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
       topBtn.fadeOut();
     }
   });
+  
 
   // ヘッダークラスの付与
   let header = $('.header');
@@ -61,13 +62,15 @@ $(document).ready(function () {
 });
   
   // swiper
-    var mySwiper = new Swiper(".mySwiper", {
-      spaceBetween: 30,
+    const mySwiper = new Swiper(".mySwiper", {
+      loop: true,
+      slidesPerView: "auto", 
+      spaceBetween: 0,
       effect: "fade",
       speed: 6000,
       allowTouchMove: false,     
       autoplay: {
-        delay: 0, // 767px以下の画面幅でautoplayの遅延時間
+        delay: 0, 
       },      
     });
 
@@ -75,7 +78,7 @@ $(document).ready(function () {
     loop: true,
     slidesPerView: "auto",    
     spaceBetween: 24,
-    centeredSlides: true,
+    // centeredSlides: true,
     initialSlide: 0,     
     breakpoints: {      
       768: { 
