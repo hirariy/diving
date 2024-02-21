@@ -103,9 +103,9 @@ function enableBodyScroll() {
       effect: "fade",
       speed: 6000,
       allowTouchMove: false,     
-      // autoplay: {
-      //   delay: 0, 
-      // },      
+      autoplay: {
+        delay: 0, 
+      },      
     });
 
   const campaignSwiper = new Swiper('.campaignSwiper', {
@@ -127,9 +127,9 @@ function enableBodyScroll() {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
     },
-    // autoplay: {
-    //   delay: 0, // 767px以下の画面幅でautoplayの遅延時間
-    // },
+    autoplay: {
+      delay: 0, // 767px以下の画面幅でautoplayの遅延時間
+    },
     on: {
       slideChange: function () {
         const activeCard = this.slides[this.activeIndex].querySelector('.campaign__card');
