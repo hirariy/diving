@@ -4,7 +4,15 @@
   box-shadow:  rem(2) rem(2) rem(10) rem(0)  rgba(0, 0, 0, 0.25);  
   background-color: $white; 
   display: inline-block;  
-  padding: rem(16);  
+  padding: rem(16); 
+
+  width: 97%;
+  margin-left: rem(6);
+  @include mq(md) {
+    width: 100%;
+    margin-left: 0;
+    
+  }  
 }
 
 .blog-card + .blog-card {

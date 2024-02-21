@@ -46,7 +46,7 @@
   text-align: center;
   margin-top: rem(26);  
   display: grid; 
-  grid-template-columns: repeat(1, 1fr);
+  grid-template-columns: 1, 1fr;
   @include mq(md) {        
     grid-template-columns: repeat(3, 1fr);
     flex-wrap: wrap;
