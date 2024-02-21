@@ -2,9 +2,9 @@
 
 .section-voice {
   margin-top: rem(88);
-  padding-bottom: rem(83);
+  // padding-bottom: rem(83);
   @include mq(md) {
-    margin-top: rem(143);   
-    padding-bottom: rem(143);  
+    margin-top: rem(144);   
+    // padding-bottom: rem(143);  
   }  
 }

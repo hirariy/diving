@@ -5,8 +5,8 @@
 }
 
 .text-hover.line {
-  padding-bottom: rem(4);
-  margin-bottom: rem(-4);  
+  // padding-bottom: rem(4);
+  // margin-bottom: rem(-4);  
   position: relative;
 }
 .text-hover.line::before {
@@ -15,7 +15,7 @@
   width: 88%;
   height: rem(1);
   position: absolute;
-  left: rem(4);
+  left: rem(8);
   bottom: rem(20);
   margin: auto;
   transform-origin: center top;

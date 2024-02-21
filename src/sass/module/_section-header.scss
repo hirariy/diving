@@ -10,7 +10,7 @@
   font-size: rem(12);
   font-style: normal;
   font-weight: $normal;
-  line-height: 150%; /* 150% */
+  line-height: 1.5; 
   margin-top: rem(8);    
 }
 
@@ -29,6 +29,7 @@
 .section-header__engTitle::first-letter {
   text-transform: capitalize;
   color: $green;
+  letter-spacing: 0.05;
 }
 
 .section-header__engTitle.section-header__engTitle--color::first-letter {

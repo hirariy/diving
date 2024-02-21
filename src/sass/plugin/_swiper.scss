@@ -12,7 +12,7 @@
   @include mq(md) {
     display: block;
     position: absolute;
-    top: 6%;   
+    top: 3.4%;   
     height: rem(80);
     width: rem(80);
 }
@@ -36,7 +36,6 @@
   background-repeat: no-repeat;
   background-size: contain;
   content: "";  
-  // margin: auto; 
   width: rem(80);
   height: rem(80);
   display: block;

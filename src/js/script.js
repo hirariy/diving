@@ -49,6 +49,40 @@ $(document).ready(function () {
     handleResize(); // 関数を実行
   });
 
+
+  // ナビゲーションリンクのクリックを処理
+  $(".sp-nav__item a").click(function () {
+    $(".js-hamburger").removeClass('is-active');
+    $(".js-sp-nav").fadeOut(300);
+
+    var targetId = $(this).attr("href");
+    $("html, body").animate({
+      scrollTop: $(targetId).offset().top
+    }, 300);
+  });
+
+  // ドロワーメニューを開いたときにページ全体のスクロールを無効にする
+function disableBodyScroll() {
+  document.body.style.overflow = 'hidden';
+}
+
+// ドロワーメニューを閉じたときにページ全体のスクロールを有効にする
+function enableBodyScroll() {
+  document.body.style.overflow = '';
+}
+
+
+
+  $(document).on('click', 'a[href*="#"]', function () {
+    let time = 400;
+    let header = $('header').innerHeight();
+    let target = $(this.hash);
+    if (!target.length) return;
+    let targetY = target.offset().top - header;
+    $('html,body').animate({ scrollTop: targetY }, time, 'swing');
+    return false;
+  });
+
   // ハンバーガーアイコンがクリックされたときの処理
   $(".js-hamburger").click(function () {
     if ($(".js-hamburger").hasClass('is-active')) {
@@ -69,9 +103,9 @@ $(document).ready(function () {
       effect: "fade",
       speed: 6000,
       allowTouchMove: false,     
-      autoplay: {
-        delay: 0, 
-      },      
+      // autoplay: {
+      //   delay: 0, 
+      // },      
     });
 
   const campaignSwiper = new Swiper('.campaignSwiper', {
@@ -93,9 +127,9 @@ $(document).ready(function () {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
     },
-    autoplay: {
-      delay: 0, // 767px以下の画面幅でautoplayの遅延時間
-    },
+    // autoplay: {
+    //   delay: 0, // 767px以下の画面幅でautoplayの遅延時間
+    // },
     on: {
       slideChange: function () {
         const activeCard = this.slides[this.activeIndex].querySelector('.campaign__card');

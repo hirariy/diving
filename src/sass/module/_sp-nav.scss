@@ -9,6 +9,8 @@
   width: 100%;
   height: 100vh;
   background-color: $green;
+  z-index: 10;
+  overflow-y: auto;
   @include mq(md) {
     display: none;
   }
@@ -23,11 +25,18 @@
 .sp-nav__logo {
   width: rem(121);
   padding-top: rem(21);
-  padding-left: rem(12); 
+  padding-left: rem(12);
+  position: fixed;
+  height: rem(80); 
 }
 
 .sp-nav__nav {
   gap: 1.7%;
+}
+
+.sp-nav__nav {
+  margin-top: rem(104);
+  
 }
 
 .sp-nav__item {

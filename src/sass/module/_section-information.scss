@@ -1,10 +1,9 @@
 @use "global" as *;
 
 .section-information {
-  padding-top: rem(84);
-  padding-bottom: rem(83);  
+  margin-top: rem(73);  
   @include mq(md) {
-    padding-top: rem(100);
-    padding-bottom: rem(76);    
+   margin-top: rem(165);   
   }  
 }
+

@@ -10,6 +10,7 @@
   }  
 }
 
+
 .footer__head { 
   padding-left: calc(50% - min(48vw, rem(172)));
   @include mq(md) {  
@@ -60,7 +61,7 @@
   font-weight: $normal;
   line-height: calc(18/ 12);  
   letter-spacing: 0.012em;
-  margin-top: rem(22);
+  margin-top: rem(20);
   margin-left: rem(1);  
   @include mq(md) {
     font-size: rem(16);

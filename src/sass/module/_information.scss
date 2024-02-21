@@ -2,6 +2,10 @@
 
 .information {
   background: #DDF0F1;
+  padding-bottom: rem(84);
+  @include mq(md) {
+    padding-bottom: rem(75);
+  }  
 }
 
 .information__inner {
@@ -11,17 +15,14 @@
   }
 }
 
-.information___engTitle {
+.information__title {
+  padding-top: rem(85);
   @include mq(md) {
-    margin-right: rem(8);
-  } 
+    padding-top: rem(100);  
+    margin-right: rem(8);      
+  }  
 }
 
-.information___jaTitle {
-  @include mq(md) {
-    margin-right: rem(8);
-  }
-}
 
 .information__content {
   margin-top: rem(28);
@@ -94,8 +95,7 @@
 
 
 .information__button {
-  margin-top: rem(41); 
-  margin-right: rem(4);    
+  margin-top: rem(39);  
   text-align: center;  
   @include mq(md) {
     margin-top: rem(39);     

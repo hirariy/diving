@@ -1,28 +1,17 @@
 @use "global" as *;
 
-.campaign { 
-  overflow: hidden;
-  padding-top: rem(9);  
+.campaign {    
   @include mq(md) {
-    position: relative;
-    padding-top: rem(26);    
-  }
-}
-
-.campaign .campaign__entitle {
-  line-height: 0.68;  
-}
-
-.campaign .campaign__jatitle {
-  line-height: 2.5;  
+    position: relative;  
+  }  
 }
 
 .campaign__container {
   overflow: hidden;
-  margin-top: rem(22);   
+  margin-top: rem(28);   
   margin-right: calc(50% - 50vw);
   @include mq(md) {
-    margin-top: rem(36);   
+    margin-top: rem(40);   
   }  
 }
 
@@ -36,9 +25,9 @@
 }
 
 .campaign__button { 
-  margin-top: rem(36);  
-  margin-right: rem(5);     
+  margin-top: rem(35);     
   text-align: center;
+  padding-bottom: rem(4);  
   @include mq(md) {
     margin-top: rem(75);        
   }  

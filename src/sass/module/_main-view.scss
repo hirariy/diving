@@ -20,14 +20,14 @@
 .main-view__titles {  
   position: absolute;
   top: 50.1%;
-  left: 52.5%;
+  left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
   color: $white; 
   margin: auto; 
   z-index: 1;
   @include mq(md) {
-    left: 51.5%;
+    left: 50%;
   }
 }
 
@@ -38,10 +38,10 @@
   font-style: normal;
   font-weight: $normal;
   line-height: 1.2;
-  letter-spacing: rem(21);
+  letter-spacing: 0.53em;
+  text-indent: 0.53em;
   @include mq(md) {
-    font-size: rem(80);
-    letter-spacing: 0.53em; 
+    font-size: rem(80);    
     line-height: 1.25;   
   }
 }
@@ -52,10 +52,6 @@
   font-size: rem(20);
   font-style: normal;
   font-weight: $normal;
-  line-height: 1.7;  
-  padding-right: rem(22);
-  @include mq(md) {
-    padding-right: rem(44);
-  }
+  line-height: 1.7;   
 }
 

@@ -14,8 +14,8 @@
 .contact__contents {  
   text-align: center;
   @include mq(md) {   
-    padding-top: rem(82);
-    padding-bottom: rem(53);    
+    padding-top: rem(80);
+    padding-bottom: rem(50);    
     display: flex;   
     justify-content: space-around;
     background: #FFF;

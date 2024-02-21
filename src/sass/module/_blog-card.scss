@@ -4,10 +4,7 @@
   box-shadow:  rem(2) rem(2) rem(10) rem(0)  rgba(0, 0, 0, 0.25);  
   background-color: $white; 
   display: inline-block;  
-  width: 97%;  
-  @include mq(md) { 
-    width: calc(33.33% - 40px * 2 / 3);  
-  }
+  padding: rem(16);  
 }
 
 .blog-card + .blog-card {
@@ -21,9 +18,6 @@
   opacity: 0.7;
 }
 
-.blog-card__body {
-  margin: rem(16);
-}
 
 .blog-card__img {
   aspect-ratio: 301 / 201;
