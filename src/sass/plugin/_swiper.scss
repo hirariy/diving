@@ -12,10 +12,10 @@
   @include mq(md) {
     display: block;
     position: absolute;
-    top: 3.4%;   
+    top: 24px;   
     height: rem(80);
     width: rem(80);
-}
+  }
 }
 
 .swiper-button-prev {

@@ -2,9 +2,9 @@
 
 .pc-nav__items {
   display: flex;
-  // gap: rem(15);
+  gap: 2.79vw;
   height: inherit;
-  padding-right: rem(5);   
+  padding-right: rem(24);   
 }
 
 .pc-nav__item {
@@ -17,9 +17,7 @@
   height: inherit;
   flex-direction: column;
   color: $white;  
-  font-weight: $normal;
-  padding-left: rem(20);
-  padding-right: rem(20); 
+  font-weight: $normal;  
   justify-content: center;  // 垂直方向にも中央に寄せる
 }
 

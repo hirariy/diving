@@ -2,30 +2,25 @@
 
 .price {  
   background: $green2;
+  padding-top: rem(84);
   padding-bottom: rem(83);  
   @include mq(md) {
     position: relative;  
+    padding-top: rem(100);
     padding-bottom: rem(104);
      
   }
 }
 
-.price__title {
-  padding-top: rem(84);
-  @include mq(md) {
-    padding-top: rem(100);    
-  }  
-}
-
 .price .price__engTitle {
   @include mq(md) {
-    margin-right: rem(5);   
+    // margin-right: rem(5);   
   } 
 }
 
 .price .price__jaTitle {
   @include mq(md) {
-    margin-right: rem(6);  
+    // margin-right: rem(6);  
   } 
 }
 
@@ -36,8 +31,7 @@
     margin-right: auto;
     margin-left: auto;     
     display: flex;  
-    flex-direction: row-reverse; 
-    // max-width: rem(1078);
+    flex-direction: row-reverse;    
   }  
 }
 
@@ -48,8 +42,7 @@
     aspect-ratio: 746 / 492; 
     height: rem(746);
     width: 45.8%;  
-    margin-left: rem(91);
-    // margin-right: rem(-9);        
+    margin-left: rem(91);          
   }
 }
 .price__image img {

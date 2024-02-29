@@ -1,10 +1,11 @@
 
 jQuery(function ($) { // この中であればWordpressでも「$」が使用可能になる
 
+//トップへ戻るボタン
   let topBtn = $('.to-top');
   topBtn.hide();
 
-  // ボタンの表示設定
+  //ボタンの表示設定
   $(window).scroll(function () {
     if ($(this).scrollTop() > 70) {
       // 指定px以上のスクロールでボタンを表示
@@ -14,76 +15,35 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
       topBtn.fadeOut();
     }
   });
-  
-
-  // ヘッダークラスの付与
-  let header = $('.header');
-  let headerHeight = $('.header').height();
-  let height = $('.main-view').height();  
-  $(window).scroll(function() {
-    if($(this).scrollTop() > height - headerHeight) {
-      header.addClass('is-color');      
-    } else {
-      header.removeClass('is-color');
-    }  
-  });
+});   
   
    //ドロワーメニュー
 
   // ウィンドウがロードされたときとリサイズされたときに実行される関数
-function handleResize() {
+$(window).resize(function () {
   var windowWidth = $(window).width(); // 現在のウィンドウの幅を取得
 
   if (windowWidth >= 767) {
     $(".js-sp-nav").fadeOut(300); // 768px以上なら非表示にする
     $(".js-hamburger").removeClass('is-active'); // ハンバーガーアイコンからis-activeクラスを削除する
+    $(".js-header").removeClass('is-color');// ハンバーガーアイコンからis-colorクラスを削除する
   }
-}
-
-// ウィンドウのロード時に実行
-$(document).ready(function () {
-  handleResize(); // 関数を初回実行
-
-  // ウィンドウのリサイズ時に実行
-  $(window).resize(function () {
-    handleResize(); // 関数を実行
-  });
-
+});
 
   // ナビゲーションリンクのクリックを処理
   $(".sp-nav__item a").click(function () {
     $(".js-hamburger").removeClass('is-active');
     $(".js-sp-nav").fadeOut(300);
-
+    $(".js-header").removeClass('is-color');// ハンバーガーアイコンからis-colorクラスを削除する
+    
     var targetId = $(this).attr("href");
     $("html, body").animate({
       scrollTop: $(targetId).offset().top
     }, 300);
   });
 
-  // ドロワーメニューを開いたときにページ全体のスクロールを無効にする
-function disableBodyScroll() {
-  document.body.style.overflow = 'hidden';
-}
-
-// ドロワーメニューを閉じたときにページ全体のスクロールを有効にする
-function enableBodyScroll() {
-  document.body.style.overflow = '';
-}
-
-
-
-  $(document).on('click', 'a[href*="#"]', function () {
-    let time = 400;
-    let header = $('header').innerHeight();
-    let target = $(this.hash);
-    if (!target.length) return;
-    let targetY = target.offset().top - header;
-    $('html,body').animate({ scrollTop: targetY }, time, 'swing');
-    return false;
-  });
-
-  // ハンバーガーアイコンがクリックされたときの処理
+  
+   // ハンバーガーアイコンがクリックされたときの処理 ドロワーメニュー
   $(".js-hamburger").click(function () {
     if ($(".js-hamburger").hasClass('is-active')) {
       $(".js-hamburger").removeClass('is-active');
@@ -93,8 +53,33 @@ function enableBodyScroll() {
       $(".js-sp-nav").fadeIn(300);
     }
   });
+
+
+    // ハンバーガーアイコンがクリックされたときの処理 ヘッダーカラー
+ $(".js-hamburger").click(function () {
+  if ($(".js-header").hasClass('is-color')) {
+    $(".js-header").removeClass('is-color');   
+  } else {
+    $(".js-header").addClass('is-color');  
+  }
+}); 
+
+  // ハンバーガーメニューボタンがクリックされたときのイベントハンドラを設定
+  $(".js-hamburger").click(function () {
+    // 現在のbodyタグのoverflowスタイルを確認
+    if ($("body").css("overflow") === "hidden") {
+      // もしoverflowがhiddenなら、bodyのスタイルを元に戻す
+      $("body").css({ height: "", overflow: "" });
+    } else {
+      // そうでなければ、bodyにheight: 100%とoverflow: hiddenを設定し、スクロールを無効にする
+      $("body").css({ height: "100%", overflow: "hidden" });
+    }
+  });
+ // メニューが閉じられた後にスクロールを再び許可する
+$(".js-sp-nav").click(function () {
+  $("body").css({ height: "", overflow: "" });
 });
-  
+
   // swiper
     const mySwiper = new Swiper(".mySwiper", {
       loop: true,
@@ -145,9 +130,8 @@ function enableBodyScroll() {
       }
     }
   });
-  });
   
-   
+
 //要素の取得とスピードの設定
 var box = $('.colorbox'),
     speed = 700;  

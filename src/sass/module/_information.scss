@@ -2,8 +2,10 @@
 
 .information {
   background: #DDF0F1;
+  padding-top: rem(85);
   padding-bottom: rem(84);
   @include mq(md) {
+    padding-top: rem(100);
     padding-bottom: rem(75);
   }  
 }
@@ -14,15 +16,6 @@
     max-width: 100%;
   }
 }
-
-.information__title {
-  padding-top: rem(85);
-  @include mq(md) {
-    padding-top: rem(100);  
-    margin-right: rem(8);      
-  }  
-}
-
 
 .information__content {
   margin-top: rem(28);

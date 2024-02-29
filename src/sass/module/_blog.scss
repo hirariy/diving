@@ -5,6 +5,7 @@
     background: linear-gradient(0deg, white 40%, transparent 40%), url('../../assets/images/common/blog-bg.jpg') top/cover no-repeat;
     width: 100%;  
     position: relative;
+    padding-top: rem(100); 
   }
 }
 
@@ -15,22 +16,14 @@
   }
 }
 
-.blog__title {
-  @include mq(md) {
-    padding-top: rem(100);    
-  }  
-}
-
-.blog .blog__engTitle {  
-  margin-right: rem(2);  
+.blog .blog__engTitle {   
   @include mq(md) {
     color: $white;  
   }
 }
 .blog .blog__jaTitle {  
   line-height: 1.7; 
-  margin-top: rem(7);
-  margin-right: rem(3);   
+  margin-top: rem(7); 
   @include mq(md) {
     color: $white;    
   }

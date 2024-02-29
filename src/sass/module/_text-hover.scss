@@ -4,18 +4,16 @@
   display: inline-block; 
 }
 
-.text-hover.line {
-  // padding-bottom: rem(4);
-  // margin-bottom: rem(-4);  
+.text-hover.line {  
   position: relative;
 }
 .text-hover.line::before {
   background: $white;
   content: '';
-  width: 88%;
+  width: 100%;
   height: rem(1);
   position: absolute;
-  left: rem(8);
+  left: 0;
   bottom: rem(20);
   margin: auto;
   transform-origin: center top;

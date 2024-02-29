@@ -34,7 +34,7 @@
   <script defer src="./assets/js/script.js"></script>
 </head>
 <body>
-  <header class="header">
+  <header class="header js-header">
     <div class="header__inner">
         <h1 class="header__logo">
             <a href="#"><img src="./assets/images/common/logo.svg" alt="CodeUpsロゴマーク"></a>
@@ -96,13 +96,9 @@
             </li> 
           </ul>
         </nav>
-        <nav class="header__sp-nav sp-nav js-sp-nav">
-          <div class="sp-nav__logo">
-            <!-- <a href="#"><img src="./assets/images/common/logo.svg" alt="CodeUpsロゴマーク"></a> -->
-            <a href="#"><img src="./assets/images/common/logo.svg" alt="CodeUpsロゴマーク"></a>
-          </div>
+        <nav class="header__sp-nav sp-nav js-sp-nav">         
           <div class="sp-nav__inner inner">
-            <div class="sp-nav__nav nav-list">
+            <div class="sp-nav__list nav-list">
               <div class="nav-list__contents-left">
               <div class="nav-list__items">
                 <ul class="nav-list__item-block sp-nav__item">
@@ -685,8 +681,12 @@
             <a href="#"><img src="./assets/images/common/logo.svg" alt="CodeUpsロゴマーク"></a>
         </div>
         <div class="footer__icons">
-          <a href="#"><img src="./assets/images/common/FacebookLogo.png" alt="Facebook"></a>
-          <a href="#"><img src="./assets/images/common/InstagramLogo.png" alt="Instagram"></a>          
+          <div class="footer__facebook">
+            <a href="#"><img src="./assets/images/common/FacebookLogo.png" alt="Facebook"></a>
+          </div>
+          <div class="footer__instagram">
+            <a href="#"><img src="./assets/images/common/InstagramLogo.png" alt="Instagram"></a>          
+          </div>         
         </div>
       </div>
       <div class="footer__nav nav-list">
