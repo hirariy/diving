@@ -2,20 +2,63 @@
 jQuery(function ($) { // この中であればWordpressでも「$」が使用可能になる
 
 //トップへ戻るボタン
-  let topBtn = $('.to-top');
-  topBtn.hide();
+  // const topBtn = $('.to-top');
+  // topBtn.hide();
 
-  //ボタンの表示設定
+  // //ボタンの表示設定
+  // $(window).scroll(function () {
+  //   if ($(this).scrollTop() > 70) {
+  //     // 指定px以上のスクロールでボタンを表示
+  //     topBtn.fadeIn();
+  //   } else {
+  //     // 画面が指定pxより上ならボタンを非表示
+  //     topBtn.fadeOut();
+  //   }
+  // });
+ // ページトップボタン
+$(function () {
+  const pageTop = $(".to-top");
+  pageTop.hide();
   $(window).scroll(function () {
     if ($(this).scrollTop() > 70) {
-      // 指定px以上のスクロールでボタンを表示
-      topBtn.fadeIn();
+      pageTop.fadeIn();
     } else {
-      // 画面が指定pxより上ならボタンを非表示
-      topBtn.fadeOut();
+      pageTop.fadeOut();
     }
   });
-});   
+  pageTop.click(function () {
+    $("body,html").animate(
+      {
+        scrollTop: 0,
+      },
+      500
+    );
+    return false;
+  });
+  // フッター手前でストップ
+  $(".to-top").hide();
+  $(window).on("scroll", function () {
+    const scrollHeight = $(document).height();
+    const scrollPosition = $(window).height() + $(window).scrollTop();
+    const footHeight = $("footer").innerHeight();
+    if (scrollHeight - scrollPosition <= footHeight) {
+   // ページトップボタンがフッター手前に来たらpositionとfixedからabsoluteに変更
+      $(".to-top").css({
+        position: "absolute",        
+        bottom: footHeight + 20 + "px",
+      });
+    } else {
+      $(".to-top").css({
+        position: "fixed",
+        bottom: "1.25rem",
+      });
+    }
+  });
+}); 
+
+});
+
+
   
    //ドロワーメニュー
 

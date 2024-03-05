@@ -3,12 +3,13 @@
 
 .to-top {
   position: fixed;
+  bottom: 0;
   right: rem(15);
-  bottom: rem(10);
+  // bottom: rem(10);
   border-radius: 50%;
   overflow: hidden;
   border: rem(1) solid $green;
-  z-index: 2;
+  z-index: 10;
   @include mq(md) {
     right: rem(20);
   }
