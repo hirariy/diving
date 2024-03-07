@@ -32,18 +32,23 @@
   letter-spacing: 0.05;
 }
 
+.section-header__engTitle.section-header__engTitle--color {
+  @include mq(md) {    
+    color: $white;
+  }
+}
 .section-header__engTitle.section-header__engTitle--color::first-letter {
   @include mq(md) {
     color: $white;
   }
 }
 
-
 .section-header__engTitle.section-header__engTitle--big {  
-  font-size: rem(80);  
-  text-align: center;
-  font-family: $en-font-family;
-  font-style: normal;
-  font-weight: $normal;
-  line-height: 1.02;   
+  font-size: rem(80);       
+}
+
+.section-header__jaTitle.section-header__jaTitle--big {
+  @include mq(md) {
+    margin-top: 0;    
+  }
 }

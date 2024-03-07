@@ -101,48 +101,48 @@
             <div class="sp-nav__list nav-list">
               <div class="nav-list__contents-left">
               <div class="nav-list__items">
-                <ul class="nav-list__item-block sp-nav__item">
+                <ul class="nav-list__item-block">
                   <li class="nav-list__item-title"><a href="#campaign">キャンペーン</a></li>
-                  <li class="nav-list__item sp-nav__item"><a href="#">ライセンス取得</a></li>
-                  <li class="nav-list__item sp-nav__item"><a href="#">貸切体験ダイビング</a></li>
-                  <li class="nav-list__item sp-nav__item"><a href="#">ナイトダイビング</a></li>
+                  <li class="nav-list__item"><a href="#">ライセンス取得</a></li>
+                  <li class="nav-list__item"><a href="#">貸切体験ダイビング</a></li>
+                  <li class="nav-list__item"><a href="#">ナイトダイビング</a></li>
                 </ul>
-                <ul class="nav-list__item-block sp-nav__item">
+                <ul class="nav-list__item-block">
                   <li class="nav-list__item-title"><a href="#aboutUs">私たちについて</a></li>            
                 </ul>
               </div>
               <div class="nav-list__items">
-                <ul class="nav-list__item-block sp-nav__item">
+                <ul class="nav-list__item-block">
                   <li class="nav-list__item-title"><a href="#information">ダイビング情報</a></li>
-                  <li class="nav-list__item sp-nav__item"><a href="#">ライセンス講習</a></li>
-                  <li class="nav-list__item sp-nav__item"><a href="#">体験ダイビング</a></li>
-                  <li class="nav-list__item sp-nav__item"><a href="#">ファンダイビング</a></li>
+                  <li class="nav-list__item"><a href="#">ライセンス講習</a></li>
+                  <li class="nav-list__item"><a href="#">体験ダイビング</a></li>
+                  <li class="nav-list__item"><a href="#">ファンダイビング</a></li>
                 </ul>
-                <ul class="nav-list__item-block sp-nav__item">
+                <ul class="nav-list__item-block">
                   <li class="nav-list__item-title"><a href="#blog">ブログ</a></li>            
                 </ul>
               </div>
             </div>
             <div class="nav-list__contents-right">
               <div class="nav-list__items">
-                <ul class="nav-list__item-block sp-nav__item">
+                <ul class="nav-list__item-block">
                   <li class="nav-list__item-title"><a href="#voice">お客様の声</a></li>            
                 </ul>
-                <ul class="nav-list__item-block sp-nav__item">
+                <ul class="nav-list__item-block">
                   <li class="nav-list__item-title"><a href="#price">料金一覧</a></li>
-                  <li class="nav-list__item sp-nav__item"><a href="#">ライセンス講習</a></li>
-                  <li class="nav-list__item sp-nav__item"><a href="#">体験ダイビング</a></li>
-                  <li class="nav-list__item sp-nav__item"><a href="#">ファンダイビング</a></li>
+                  <li class="nav-list__item"><a href="#">ライセンス講習</a></li>
+                  <li class="nav-list__item"><a href="#">体験ダイビング</a></li>
+                  <li class="nav-list__item"><a href="#">ファンダイビング</a></li>
                 </ul>         
               </div>
               <div class="nav-list__items">
-                <ul class="nav-list__item-block sp-nav__item">
+                <ul class="nav-list__item-block">
                   <li class="nav-list__item-title"><a href="#">よくある質問</a></li>            
                 </ul>
-                <ul class="nav-list__item-block sp-nav__item">
+                <ul class="nav-list__item-block">
                   <li class="nav-list__item-title"><a href="#">プライバシー<br class="u-mobile">ポリシー</a></li>            
                 </ul>         
-                <ul class="nav-list__item-block sp-nav__item">
+                <ul class="nav-list__item-block">
                   <li class="nav-list__item-title"><a href="#">利用規約</a></li>            
                 </ul>
                 <ul class="nav-list__item-block ">
@@ -157,8 +157,8 @@
 </header>
 
   <section class="main-view">
-    <div class="swiper mySwiper main-view-swiper">
-      <div class="swiper-wrapper main-view__wrapper">
+    <div class="main-view__swiper swiper js-mySwiper">
+      <div class="main-view__wrapper swiper-wrapper">
         <div class="swiper-slide">
           <picture class="main-view__img">
             <source media="(min-width: 768px)" srcset="./assets/images/common/fv1.jpg">           
@@ -193,11 +193,11 @@
   <section class="campaign section-campaign" id="campaign">
     <div class="campaign__inner inner">
     <div class="campaign__title section-header">        
-      <p class="section-header__engTitle campaign__entitle">campaign</p>
-      <h2 class="section-header__jaTitle campaign__jatitle">キャンペーン</h2>
+      <p class="section-header__engTitle">campaign</p>
+      <h2 class="section-header__jaTitle">キャンペーン</h2>
     </div>
-    <div class="swiper-container campaign__container slider">     
-      <div class="campaignSwiper campaign-swiper">
+    <div class="campaign__container slider swiper-container">     
+      <div class="campaign-swiper js-campaignSwiper">
         
         <div class="swiper-wrapper campaign__wrapper">
           <div class="swiper-slide campaign__card">
@@ -337,8 +337,8 @@
        <div class="swiper-button swiper-button-prev"></div>
        <div class="swiper-button swiper-button-next"></div>    
     </div>    
-    <div class="button campaign__button slide">             
-      <a href="#">View more<span></span></a>
+    <div class="campaign__button slide">             
+      <a href="#" class="button">View more<span></span></a>
     </div>
   </div>
   </section>
@@ -346,8 +346,8 @@
   <section class="aboutUs section-aboutUs" id="aboutUs">
     <div class="aboutUs__inner inner">
       <div class="aboutUs__title section-header">        
-        <p class="section-header__engTitle aboutUs__engTitle">about us</p>
-        <h2 class="section-header__jaTitle aboutUs__jaTitle">私たちについて</h2>
+        <p class="section-header__engTitle">about us</p>
+        <h2 class="section-header__jaTitle">私たちについて</h2>
       </div>  
       <div class="aboutUs__contain">
         <div class="aboutUs__figure">
@@ -373,8 +373,8 @@
             ここにテキストが入ります。ここにテキストが入ります。
             ここにテキスト
           </p>       
-          <div class="button aboutUs__button">             
-            <a href="#">View more<span></span></a>
+          <div class="aboutUs__button">             
+            <a href="#" class="button">View more<span></span></a>
           </div>   
         </div> 
       </div>
@@ -389,8 +389,8 @@
   <section class="information section-information" id="information">
     <div class="information__inner inner">
       <div class="information__title section-header">        
-        <p class="section-header__engTitle information___engTitle">information</p>
-        <h2 class="section-header__jaTitle information___jaTitle">ダイビング情報</h2>
+        <p class="section-header__engTitle">information</p>
+        <h2 class="section-header__jaTitle">ダイビング情報</h2>
       </div>
       <div class="information__content">
         <figure class="information__figure colorbox">          
@@ -401,8 +401,8 @@
           <h3 class="information__heading">ライセンス講習</h3>
           <p class="information__text">当店はダイビングライセンス（Cカード）世界最大の教育機関PADIの「正規店」として店舗登録されています。<br>
           正規登録店として、安心安全に初めての方でも安心安全にライセンス取得をサポート致します。</p>
-          <div class="button information__button">             
-            <a href="#">View more<span></span></a>
+          <div class="information__button">             
+            <a href="#" class="button">View more<span></span></a>
           </div> 
         </div>
         </div>
@@ -413,10 +413,10 @@
   <section class="blog section-blog" id="blog">
     <div class="blog__inner inner">
       <div class="blog__title section-header">        
-        <p class="section-header__engTitle section-header__engTitle--color blog__engTitle">blog</p>
-        <h2 class="section-header__jaTitle blog__jaTitle">ブログ</h2>
+        <p class="section-header__engTitle section-header__engTitle--color">blog</p>
+        <h2 class="section-header__jaTitle">ブログ</h2>
       </div>
-      <div class="blog__cards">
+      <div class="blog__cards blog-cards">
         <a href="#" class="blog__card blog-card">
           <div class="blog-card__body">
             <figure class="blog-card__img">
@@ -472,8 +472,8 @@
           </div>
         </a>    
       </div> 
-      <div class="button blog__button">             
-        <a href="#">View more<span></span></a>
+      <div class="blog__button">             
+        <a href="#" class="button">View more<span></span></a>
       </div>       
     </div>
     <div class="blog__decoration">
@@ -484,10 +484,10 @@
   <section class="voice section-voice" id="voice">
     <div class="voice__inner inner">
       <div class="voice__title section-header">        
-        <p class="section-header__engTitle voice__engTitle">voice</p>
-        <h2 class="section-header__jaTitle voice__jaTitle">お客様の声</h2>
+        <p class="section-header__engTitle">voice</p>
+        <h2 class="section-header__jaTitle">お客様の声</h2>
       </div>
-      <div class="voice__cards">
+      <div class="voice__cards voice-cards">
         <div class="voice__card voice-card">
           <div class="voice-card__header">
             <div class="voice-card__header-text">
@@ -529,8 +529,8 @@
           </p>
         </div>
       </div>
-      <div class="button voice__button">             
-        <a href="#">View more<span></span></a>
+      <div class="voice__button">             
+        <a href="#" class="button">View more<span></span></a>
       </div> 
     </div>
      <div class="voice__decoration-left">
@@ -544,8 +544,8 @@
   <section class="price section-price" id="price">
     <div class="price__inner inner">
       <div class="price__title section-header">        
-        <p class="section-header__engTitle price__engTitle">price</p>
-        <h2 class="section-header__jaTitle price__jaTitle">料金一覧</h2>
+        <p class="section-header__engTitle">price</p>
+        <h2 class="section-header__jaTitle">料金一覧</h2>
       </div>
       <div class="price__container">
         <picture class="price__image colorbox">
@@ -619,8 +619,8 @@
           </div>
         </div>
       </div> 
-      <div class="button price__button">             
-        <a href="#">View more<span></span></a>
+      <div class="price__button">             
+        <a href="#" class="button">View more<span></span></a>
       </div>     
     </div>
     <div class="price__decoration">
@@ -650,11 +650,11 @@
       <div class="contact__right-content">
         <div class="contact__title section-header">        
           <p class="section-header__engTitle section-header__engTitle--big">contact</p>
-          <h2 class="section-header__jaTitle contact__jaTitle">お問い合わせ</h2>
+          <h2 class="section-header__jaTitle section-header__jaTitle--big">お問い合わせ</h2>
         </div>  
         <p class="contact__text">ご予約・お問い合わせはコチラ</p>
-        <div class="button contact__button">             
-          <a href="#">Contact us<span></span></a>
+        <div class="contact__button">             
+          <a href="#" class="button">Contact us<span></span></a>
         </div> 
       </div> 
     </div>

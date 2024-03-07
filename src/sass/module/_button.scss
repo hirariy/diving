@@ -1,6 +1,6 @@
 @use "global" as *;
 
-.button a {
+.button {
   position: relative;
   display: inline-block;
   cursor: pointer;
@@ -17,7 +17,7 @@
   z-index: 1;
 }
 
-.button a::before {
+.button::before {
     content: '';
     border: rem(1) solid $green;
     position: absolute;
@@ -28,7 +28,7 @@
     z-index: -1;  
   }
  
- .button a::after {
+ .button::after {
   background: $white;
   position: absolute;
   top: 0;
@@ -41,10 +41,10 @@
   transition: .2s cubic-bezier(0.45, 0, 0.55, 1);
   z-index: -1;
 }
-.button a:hover {
+.button:hover {
   color: $green;
 }
-.button a:hover::after {
+.button:hover::after {
   transform: scale(1, 1);
 }
 
@@ -64,7 +64,7 @@
   transform: skew(50deg);     
   }
 
-  .button a:hover span::before {
+  .button:hover span::before {
     border-bottom: rem(1) solid $green;
     border-right: rem(1) solid $green;    
   }

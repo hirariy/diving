@@ -9,7 +9,7 @@
   border-radius: 50%;
   overflow: hidden;
   border: rem(1) solid $green;
-  z-index: 10;
+  z-index: 4;
   @include mq(md) {
     right: rem(20);
   }

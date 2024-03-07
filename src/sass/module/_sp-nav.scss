@@ -3,7 +3,6 @@
 .sp-nav {
   display: none;
   position: absolute;
-  // top: 0;
   top: rem(64);
   left: 0;
   right: 0;
@@ -11,7 +10,7 @@
   height: 100vh;
   background-color: $green;
   z-index: -1;
-  // overflow-y: auto;
+  padding-bottom: rem(100);  
   overflow: scroll;
   @include mq(md) {
     display: none;
@@ -39,13 +38,13 @@
   // margin-top: rem(104);  
 }
 
-.sp-nav__item {
-  margin-left: rem(-1);
-  line-height: 1.1;  
-}
+// .sp-nav__item {
+//   margin-left: rem(-1);
+//   line-height: 1.1;  
+// }
 
 
 /* no-scrollクラスの定義 */
-.no-scroll {
-  overflow: hidden; /* スクロールを非表示にする */
-}
+// .no-scroll {
+//   overflow: hidden; /* スクロールを非表示にする */
+// }

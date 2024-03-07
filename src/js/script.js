@@ -1,20 +1,6 @@
 
 jQuery(function ($) { // この中であればWordpressでも「$」が使用可能になる
 
-//トップへ戻るボタン
-  // const topBtn = $('.to-top');
-  // topBtn.hide();
-
-  // //ボタンの表示設定
-  // $(window).scroll(function () {
-  //   if ($(this).scrollTop() > 70) {
-  //     // 指定px以上のスクロールでボタンを表示
-  //     topBtn.fadeIn();
-  //   } else {
-  //     // 画面が指定pxより上ならボタンを非表示
-  //     topBtn.fadeOut();
-  //   }
-  // });
  // ページトップボタン
 $(function () {
   const pageTop = $(".to-top");
@@ -52,13 +38,10 @@ $(function () {
         position: "fixed",
         bottom: "1.25rem",
       });
-    }
-  });
-}); 
-
+      }
+    });
+  }); 
 });
-
-
   
    //ドロワーメニュー
 
@@ -74,7 +57,7 @@ $(window).resize(function () {
 });
 
   // ナビゲーションリンクのクリックを処理
-  $(".sp-nav__item a").click(function () {
+  $(".nav-list__item-title a, .nav-list__item a").click(function () {
     $(".js-hamburger").removeClass('is-active');
     $(".js-sp-nav").fadeOut(300);
     $(".js-header").removeClass('is-color');// ハンバーガーアイコンからis-colorクラスを削除する
@@ -124,7 +107,7 @@ $(".js-sp-nav").click(function () {
 });
 
   // swiper
-    const mySwiper = new Swiper(".mySwiper", {
+    const mySwiper = new Swiper(".js-mySwiper", {
       loop: true,
       slidesPerView: "auto", 
       spaceBetween: 0,
@@ -136,7 +119,7 @@ $(".js-sp-nav").click(function () {
       },      
     });
 
-  const campaignSwiper = new Swiper('.campaignSwiper', {
+  const campaignSwiper = new Swiper('.js-campaignSwiper', {
     loop: true,
     slidesPerView: "auto",    
     spaceBetween: 24,
