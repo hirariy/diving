@@ -1,0 +1,12 @@
+@use "global" as *;
+
+.blog-cards {
+  text-align: center; 
+  display: grid; 
+  grid-template-columns: 1, 1fr;
+  @include mq(md) {        
+    grid-template-columns: repeat(3, 1fr);
+    flex-wrap: wrap;
+    gap: rem(40);         
+  }  
+}
