@@ -1,0 +1,71 @@
+@use "global" as *;
+
+.page-faq {
+  .accordion{
+    .accordion {
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 30px;
+      max-width: 300px;
+      position: relative;
+      width: 100%;
+    }
+    .accordion-title {
+      color: $white;
+      background: $green;
+      cursor: pointer;
+      font-size: 16px;
+      padding: 10px 20px;
+    }
+    .accordion-content {
+      display: none;
+      padding: 10px 20px;
+      margin-top: rem(16);
+      border: 1px solid $green;
+    }
+    .accordion-content p {
+      font-size: 13px;
+      line-height: 1.5;
+    }
+    /* タイトルの背景色 */
+    .accordion-item{
+      color: $black;
+      background: $white;
+      margin-top: rem(16);      
+    }    
+  
+    /* 矢印 */
+    .accordion-title {
+      position: relative;
+    }
+    .accordion-title::after {
+      border-right: solid 2px #fff;
+      border-top: solid 2px #fff;
+      content: "";
+      display: block;
+      height: 8px;
+      position: absolute;
+      right: 25px;
+      top: 38%;
+      transform: rotate(135deg);
+      transition: transform .3s ease-in-out, top .3s ease-in-out;
+      width: 8px;
+    }
+    .accordion-title.open::after {
+      top: 45%;
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+.page-faq__accordion {
+  margin-right: auto;
+  margin-left: auto;
+  
+  
+  max-width: 100%;
+  @include mq(md) {
+    max-width: rem(700);
+    width: 100%;
+  }
+}

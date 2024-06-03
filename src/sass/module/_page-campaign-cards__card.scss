@@ -1,0 +1,13 @@
+@use "global" as *;
+
+.page-campaign-cards__card {
+  width: 100%; // 基本的にはコンテナの幅に合わせる
+  // max-width: rem(280);
+  max-width: clamp(rem(280), 100vw - rem(95), rem(360)); // 280pxから350pxの範囲で動的に調整
+  @include mq(md) {
+    // max-width: rem(520); // カードの最大幅を520pxに設定
+    max-width: clamp(rem(450), 100vw - rem(920), rem(520)); // 画面幅が1440pxの時に520px、それ以下では350pxから520pxの範囲で調整
+    width: 100%;
+  }
+}
+

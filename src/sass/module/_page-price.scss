@@ -1,0 +1,69 @@
+@use "global" as *;
+
+.page-price {
+
+}
+
+.page-price__menu {
+  // border-collapse: collapse;
+  @include mq(md) {
+    display: flex;
+  }
+}
+
+.page-price__category {
+  color: $white;
+  background: $green; 
+  max-width: rem(345);
+  width: 100%;
+  // border-collapse: collapse;
+  @include mq(md) {
+    max-width: rem(200);
+    // float: left;
+    // display: block;
+  }  
+}
+
+
+.page-price__menu {
+  margin: rem(40) auto;
+  border-collapse: collapse;
+  border: solid 1px $green;
+  @include mq(md) {
+    margin: rem(80) auto;
+  }
+  }
+
+  
+
+  
+  td, th {
+  // display: block;
+  padding: 5px;
+  // max-width: rem(345);
+  width: 100%;
+  border: solid 1px $green;
+  @include mq(md) {
+    // max-width: rem(200);
+  }
+  }
+
+  th {
+    vertical-align: middle;
+    text-align: center;
+    @include mq(md) {
+      display: block;
+      float: left;
+    }
+  }
+  
+  td{
+  vertical-align: middle;
+  text-align: center;
+  @include mq(md) {
+    text-align: left;
+    
+  }
+  }
+
+  

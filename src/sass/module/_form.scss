@@ -1,0 +1,29 @@
+@use "global" as *;
+
+.form__items {
+  @include mq(md) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.form__item::after {
+  content: "必須";
+  color: $white;
+  background: #C94800;
+  font-size: rem(12);
+  margin-left: rem(8);
+  
+}
+
+.form__checks {
+  flex-direction: column;
+}
+
+.form__button {  
+  text-align: center;
+  margin-top: rem(24);
+  @include mq(md) {
+    margin-top: rem(40);    
+  }  
+}

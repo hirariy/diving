@@ -1,0 +1,30 @@
+@use "global" as *;
+
+.page-terms {
+  color: $black;   
+}
+
+.page-terms__inner {
+  @include mq(md) {
+    max-width: rem(800);
+    width: 100%;
+    margin: auto; 
+  }
+}
+
+.page-terms__lists {
+	margin: 1em 0;
+	padding-left: 20px;
+	list-style-type: decimal;
+}
+
+.page-terms__contents {
+  margin-top: rem(40);  
+}
+
+.page-terms__content {
+  margin-top: rem(40);
+  
+}
+
+

@@ -1,0 +1,9 @@
+@use "global" as *;
+
+
+.section-page-price {
+  margin-top: rem(52);
+  @include mq(md) {
+    margin-top: rem(150);    
+  }  
+}

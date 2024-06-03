@@ -11,7 +11,7 @@
   font-family: $en-font-family; 
   font-size: rem(14);
   font-weight: $normal;
-  padding: rem(15) rem(88) rem(16.5) rem(40);  
+  padding: rem(15) rem(88) rem(16) rem(40);  
   text-align: center;
   white-space:nowrap;
   z-index: 1;
@@ -67,4 +67,75 @@
   .button:hover span::before {
     border-bottom: rem(1) solid $green;
     border-right: rem(1) solid $green;    
+  }
+
+//button--white
+
+  .button.button--white {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  transition: .2s cubic-bezier(0.45, 0, 0.55, 1);
+  background: $white;
+  border: rem(1) solid $white; 
+  color: $green;
+  font-family: $en-font-family; 
+  font-size: rem(14);
+  font-weight: $normal;
+  padding: rem(15) rem(88) rem(16) rem(40);  
+  text-align: center;
+  white-space:nowrap;
+  z-index: 1;
+}
+
+.button.button--white::before {
+    content: '';
+    border: rem(1) solid $white;
+    position: absolute;
+    top: rem(4);
+    right: rem(-4);
+    width: 100%;
+    height: 100%;
+    z-index: -1;  
+  }
+ 
+ .button.button--white::after {
+  background: $green;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 100%;
+  transform: scale(0, 1);
+  transform-origin: left top;
+  transition: .2s cubic-bezier(0.45, 0, 0.55, 1);
+  z-index: -1;
+}
+.button.button--white:hover {
+  color: $white;
+}
+.button.button--white:hover::after {
+  transform: scale(1, 1);
+}
+
+.button.button--white span {
+  display: inline-block;
+}
+
+.button.button--white span::before {
+  content: '';
+  position: absolute;
+  width: rem(41);
+  height: rem(8);
+  top: rem(19);
+  right: rem(43);
+  border-bottom: rem(1) solid $green;
+  border-right: rem(1) solid $green;
+  transform: skew(50deg);     
+  }
+
+  .button.button--white:hover span::before {
+    border-bottom: rem(1) solid $white;
+    border-right: rem(1) solid $white;    
   }

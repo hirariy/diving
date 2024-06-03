@@ -153,8 +153,18 @@ $(".js-sp-nav").click(function () {
           activeCard.style.marginLeft = margin + 'px';
           activeCard.style.marginRight = margin + 'px';
         }
-      }
+      } 
     }
+  });
+      // faqアコーディオン
+$(function () {
+  // タイトルをクリックすると
+  $(".js-accordion-title").on("click", function () {
+    // クリックした次の要素を開閉
+    $(this).next().slideToggle(300);
+    // タイトルにopenクラスを付け外しして矢印の向きを変更
+    $(this).toggleClass("open", 300);
+    })
   });
   
 
@@ -181,4 +191,20 @@ box.each(function(){
             counter = 1;
           }
     });
-  })
+
+
+    // page-campaign
+ 
+  //   $(function () {
+  //     $('.js-tab-trigger').on('click', function () {
+  //         $('.js-tab-trigger').removeClass('is-active');
+  //         $('.js-tab-target').removeClass('is-active');
+  //         $(this).addClass('is-active');
+  //         let id = $(this).data("id");
+  //         $('#' + id).addClass('is-active')
+  //     });
+  // });
+
+    });
+
+

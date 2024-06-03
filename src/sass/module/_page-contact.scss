@@ -1,0 +1,8 @@
+@use "global" as *;
+
+.page-contact__inner {
+  @include mq(md) {
+    max-width: rem(700);
+    width: 100%;
+  }
+}

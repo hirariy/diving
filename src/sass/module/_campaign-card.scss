@@ -41,7 +41,8 @@
   padding-left: rem(16);    
   display: flex; 
   flex-direction: column; 
-  flex-grow: 1;
+  // flex-grow: 1;
+  height: 100%;
   @include mq(md) {
     padding-top: rem(23);
     padding-bottom: rem(31); 
@@ -77,8 +78,8 @@
   font-style: normal;
   font-weight: 500;
   line-height: calc(24/ 16);    
-  display: flex;
-  flex-direction: column; 
+  // display: flex;
+  // flex-direction: column; 
   flex-grow: 1;
 }
 
@@ -91,8 +92,8 @@
   font-style: normal;
   font-weight: $normal;
   line-height: 1.7;  
-  display: flex;
-  flex-direction: column;  
+  // display: flex;
+  // flex-direction: column;  
   @include mq(md) {
     margin-top: rem(16);   
     padding-right: rem(11); 
@@ -138,4 +139,66 @@
     font-size: clamp(rem(32),3vw, rem(40));
     margin-left: rem(25); 
   }
+}
+
+// page-campaign(下層)
+
+.campaign-card__content {
+  display: none;
+  @include mq(md) {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+}
+
+
+.campaign-card__detail {
+  margin-top: rem(24);
+  // display: flex;
+  // flex-direction: column;
+  flex-grow: 1;
+}
+
+.campaign-card__date {
+  display: block;
+  width: 100%;
+  margin-top: rem(32);
+  text-align: center;  
+}
+
+.campaign-card__button {
+  margin-top: rem(42);
+  text-align: center;
+}
+
+.pagination-1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0 8px;
+  list-style-type: none;
+  padding: 0;
+}
+
+.pagination-1 a {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2em;
+  height: 2em;
+  border: 1px solid #408f95;
+  border-radius: 1px;
+  color: #408f95;
+}
+
+.pagination-1 a:not(:hover) {
+  text-decoration: none;
+}
+
+.pagination-1 .current a {
+  background-color: #408f95;
+  color: #fff;
+  pointer-events: none;
 }

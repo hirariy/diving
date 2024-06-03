@@ -1,0 +1,18 @@
+@use "global" as *;
+
+.breadcrumb {
+  max-width: rem(1080);
+  width: 100%;
+  // padding: rem(90) 0;
+  color: $black;
+  font-size: rem(14);
+  margin-top: rem(8);
+  
+  @include mq(md) {
+    // padding: rem(100) 0;
+  }
+}
+
+.breadcrumb.breadcrumb--white {
+  color: $white;
+}
