@@ -1,7 +1,6 @@
 @use "global" as *;
 
-
-.page-campaign-cards { 
+.page-voice-cards { 
   display: grid; 
   grid-template-columns: 1fr; // スマホサイズでは1列
   gap: rem(40);  
@@ -14,7 +13,7 @@
   }  
 }
 
-.page-campaign-cards__card {
+.page-voice-cards__card {
   width: 100%; // 基本的にはコンテナの幅に合わせる
   // max-width: rem(280);
   max-width: clamp(rem(280), 100vw - rem(95), rem(360)); // 280pxから350pxの範囲で動的に調整
@@ -24,4 +23,3 @@
     width: 100%;
   }
 }
-

@@ -1,0 +1,62 @@
+@use "global" as *;
+
+
+.side-accordion__one {
+  max-width: rem(293);
+  width: 100%;
+  color: $green;
+  font-size: rem(24);
+  font-weight: $regular; 
+  letter-spacing: 0.05em;
+}
+
+.side-accordion__header {
+  position: relative;
+  display: inline-block;
+  padding-left: rem(32);
+}
+
+.side-accordion__header.side-accordion__header--month {
+  padding-left: rem(64);  
+}
+
+
+.side-accordion__header:before {
+  content: '';
+  width: 0;
+  height: 0;
+  // border-style: solid;
+  // border-width: rem(6) 0  rem(6) rem(8);
+  // border-color: transparent transparent transparent $green;
+  // clip-path: polygon(0 0, 50% 100%, 100% 0);
+  border-top: rem(18) solid $green;
+  border-right: rem(12) solid transparent;
+  border-left: rem(12) solid transparent;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+
+.side-accordion__header.side-accordion__header--month:before {
+  left: rem(32);
+}
+
+.side-accordion__header.open:before {
+  transform: rotate(626deg);
+}
+
+
+.side-accordion__inner {
+  display: none;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.side-accordion__text {
+  padding-left: rem(64);
+  
+}

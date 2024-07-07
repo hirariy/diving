@@ -25,6 +25,16 @@
   transition-timing-function: linear;   
 }
 
+.campaign__card { 
+  width: rem(280);
+  height: auto;
+  display: flex;
+  flex-direction: column; 
+  @include mq(md) {
+    width: rem(333);
+  }  
+}
+
 .campaign__button { 
   margin-top: rem(35);     
   text-align: center;

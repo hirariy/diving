@@ -19,9 +19,12 @@
     }
     .accordion-content {
       display: none;
-      padding: 10px 20px;
+      padding: rem(24) rem(16);
       margin-top: rem(16);
       border: 1px solid $green;
+      @include mq(md) {
+        padding: rem(40);
+      }
     }
     .accordion-content p {
       font-size: 13px;

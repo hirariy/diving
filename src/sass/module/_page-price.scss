@@ -1,69 +1,127 @@
 @use "global" as *;
 
-.page-price {
 
+.page-price__container {
+  @include mq(md) {
+    max-width: rem(700);
+    margin-inline: auto;
+  }
 }
 
 .page-price__menu {
-  // border-collapse: collapse;
+  margin-top: rem(40);
+  border: 1px solid $green;
+  
   @include mq(md) {
     display: flex;
+    margin-top: rem(74);    
+  }
+}
+
+.page-price__title {
+  background: $green;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+  @include mq(md) {
+    flex-direction: column;
+    width: rem(282);
+    max-width: 100%;
   }
 }
 
 .page-price__category {
-  color: $white;
-  background: $green; 
-  max-width: rem(345);
-  width: 100%;
-  // border-collapse: collapse;
+  text-align: center;
+  font-size: rem(16);
+  font-weight: $bold;
+  color: $white; 
+  line-height: calc(24 / 16);
+  letter-spacing: 0.05em;  
+  padding: rem(8); 
   @include mq(md) {
-    max-width: rem(200);
-    // float: left;
-    // display: block;
-  }  
+    // white-space:nowrap;
+    // flex-direction: column;
+    // max-width: rem(200);
+    // padding: rem(40) rem(44);
+    // display: grid;
+    // place-items: center;
+    // flex: 0 0 rem(200);
+  }
 }
 
+// .page-price__category span {
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   position: relative;
+//   gap: rem(8);
+// @include mq(md) {
+//   flex-direction: column-reverse;
+// }
+// }
 
-.page-price__menu {
-  margin: rem(40) auto;
-  border-collapse: collapse;
-  border: solid 1px $green;
+.page-price__img {
+  width: rem(24);
+  height: rem(24);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: inline-block;
   @include mq(md) {
-    margin: rem(80) auto;
+    background-position: bottom;
+    width: rem(64);
+    height: rem(64);
   }
-  }
+}
 
-  
-
-  
-  td, th {
-  // display: block;
-  padding: 5px;
-  // max-width: rem(345);
+.page-price__items__wrapper {
   width: 100%;
-  border: solid 1px $green;
-  @include mq(md) {
-    // max-width: rem(200);
-  }
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+
+  .page-price__items {
+    display: flex;
+    justify-content: space-between;
+    // border: 1px solid $green;
+    width: 100%;
+    align-items: center;
   }
 
-  th {
-    vertical-align: middle;
+  .page-price__type {
     text-align: center;
+    width: 100%;
+    padding: rem(16);  
     @include mq(md) {
-      display: block;
-      float: left;
+      // width: rem(340);
+      max-width: 100%;
     }
   }
-  
-  td{
-  vertical-align: middle;
-  text-align: center;
-  @include mq(md) {
-    text-align: left;
-    
-  }
-  }
 
-  
+  .page-price__type.page-price__type--space {
+    padding: rem(28) rem(16) ;
+    @include mq(md) {
+      padding: rem(16);  
+    }
+   }
+
+ .page-price__price {
+  // border-left: 1px solid $green;
+  max-width: 100%; 
+  width: rem(106);
+  text-align: right;
+  height: auto;
+  padding: rem(28) rem(16);  
+  @include mq(md) {
+    max-width: rem(162);
+    padding: rem(16);  
+  }
+ }
+
+ 
+
+ .page-price__type,
+ .page-price__price {
+  border: 1px solid $green;
+ }

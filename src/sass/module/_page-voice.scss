@@ -1,0 +1,17 @@
+@use "global" as *;
+
+// .page-voice__inner {
+//   padding-bottom: rem(80); // 追加: ページネーションとコンテンツの間に余白を確保
+//   @include mq(md) {
+//     padding-bottom: rem(100);   
+   
+//   }
+// }
+
+
+.page-voice__pagination {
+  margin-top: rem(80);
+  @include mq(md) {
+    margin-top: rem(72);     
+  }  
+}

@@ -1,0 +1,15 @@
+@use "global" as *;
+
+.sub-campaign__cards {
+  margin-top: rem(24);  
+  // text-align: center; 
+  display: grid; 
+  grid-template-columns: 1, 1fr;
+  gap: rem(40);
+}
+
+.sub-campaign__cards__card {
+  @include mq(md) {
+    max-width: rem(293);
+  }
+}

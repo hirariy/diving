@@ -1,0 +1,23 @@
+@use "global" as *;
+
+.single__contain {
+  @include mq(md) {
+    display: flex;
+    justify-content: space-between;
+    @include mq(md) {
+      gap: rem(83);
+    }    
+  }
+}
+
+.single__main {
+  max-width: rem(480);
+  margin-inline: auto;
+  @include mq(md) {
+    max-width: 64.9%;
+    width: 100%;
+    margin-inline: initial;
+  }
+}
+
+

@@ -1,0 +1,69 @@
+@use "global" as *;
+
+.single-card {
+
+}
+
+.single-card__body {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: rem(24);
+  max-width: rem(800);
+  margin-inline: auto;
+  @include mq(md) {
+    gap: rem(40);
+  }
+}
+
+
+.single-card__date {
+  font-size: rem(14);  
+  font-family: $en-font-family;
+  font-weight: $regular;
+  letter-spacing: 0.05em;  
+}
+
+.single-card__title {
+  font-size: rem(24);
+  border-bottom: 1px solid $green;
+  padding-bottom: rem(4);
+  @include mq(md) {
+    padding-bottom: 0;    
+  }  
+}
+
+
+.single-card__img {
+    aspect-ratio: 345 / 231;
+    width: 100%;
+    // margin-top: rem(24);    
+    @include mq(md) {
+      aspect-ratio: 700 / 468;
+      // margin-top: rem(40);    
+    }
+}
+
+.single-card__img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.single-card___list {
+  display: grid; 
+  gap: rem(4);
+}
+
+.single-card__list__item::before {  
+  content: "";
+  background: url(../images/common/page-hitode.png) no-repeat;
+  background-size: 90%;
+  display: inline-block; 
+  width: rem(20);
+  height: rem(20);
+  vertical-align: middle;
+  margin-right: rem(3);
+  background-position: rem(0.7) rem(-2);
+}
+
+  

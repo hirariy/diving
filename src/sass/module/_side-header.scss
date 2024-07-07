@@ -1,0 +1,22 @@
+@use "global" as *;
+
+.side-header {
+  display: flex;
+  align-items: center;
+  gap: rem(8);
+  padding: rem(5) rem(16);
+  border-left: rem(8) solid $green;
+}
+
+.side-header__image {
+  width: rem(39);
+  height: rem(34);
+}
+
+.side-header__title {
+  color: $black;
+  font-family: $ja-font-family;
+  font-size: rem(24);
+  font-style: normal;
+  font-weight: $normal;
+}

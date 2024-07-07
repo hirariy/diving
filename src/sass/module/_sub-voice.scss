@@ -1,0 +1,36 @@
+@use "global" as *;
+
+.sub-voice__card {
+  margin-top: rem(24);  
+}
+
+.sub-voice__image {
+    aspect-ratio: 294 / 218;
+    width: 100%;
+}
+
+.sub-voice__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.sub-voice__age {
+  margin-top: rem(16);    
+  font-size: rem(12);
+  font-weight: $regular; 
+  line-height: calc(18 / 12);
+  letter-spacing: 0.05em;  
+}
+
+.sub-voice__title {
+  margin-top: rem(8);   
+  font-size: rem(24);
+  font-weight: 500;
+  letter-spacing: 0.05em;   
+}
+
+.sub-voice__button {
+  margin-top: rem(40);
+  text-align: center;
+}

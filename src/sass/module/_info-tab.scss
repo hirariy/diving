@@ -1,0 +1,58 @@
+@use "global" as *;
+
+
+.info-tab {
+  display: flex;    
+}
+
+.info-tab__trigger { /* label */
+  text-align: center;
+  cursor: pointer;
+  display: block;
+  padding: rem(10) rem(16);  
+  box-shadow: rem(4) rem(4) rem(8) 0 #00000040;
+  background-color: $green2;
+  color: $green;
+  font-size: rem(14);
+  align-items: center; 
+  width: rem(102);
+  max-width: 100%;
+    @include mq(md) { 
+      display: flex;
+      text-align: center;
+      font-size: rem(24);   
+      width: rem(300);
+      max-width: 100%;   
+  }
+}
+
+.info-tab__trigger::before {
+  display: none;
+  @include mq(md) {    
+    content: "";
+    display: block;        
+    width: rem(64);
+    height: rem(64);  
+    background: $green;
+    -webkit-mask-image: url(../images/common/animal_icon1.png);
+    mask-image: url(../images/common/animal_icon1.png); 
+    -webkit-mask-size: contain; 
+    mask-size: contain;         
+    -webkit-mask-repeat: no-repeat; 
+    mask-repeat: no-repeat;        
+    margin-right: rem(10);
+  }
+}
+
+.info-tab__trigger.is-active {
+  background: $green;
+  color: $white;  
+}
+
+.info-tab__trigger.is-active::before {
+  background: $white;
+}
+
+.info-tab__trigger.is-active::before img {
+  background: $green2;
+}
