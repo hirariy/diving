@@ -1,0 +1,88 @@
+@use "global" as *;
+
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0 rem(12);
+  list-style-type: none;
+  padding: 0;
+}
+
+.pagination a {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2em;
+  height: 2em;
+  border: 1px solid #408f95;
+  border-radius: 1px;
+  color: #408f95;
+}
+
+.pagination a:not(:hover) {
+  text-decoration: none;
+}
+
+.pagination .current a,
+.pagination .active a {
+  background-color: #408f95;
+  color: #fff;
+  pointer-events: none;
+}
+
+.pagination li:nth-child(n+6):not(.prev):not(.next) {
+  display: none;
+  @include mq(md) {
+    display: block;
+  }
+}
+
+.pagination__prev {
+  margin-right: rem(40);  
+  // display: block;
+}
+
+.pagination__prev a {
+  position: relative;
+}
+
+.pagination__prev a::before {
+
+  border-right: 1px solid $green;
+  border-top: 1px solid $green;
+  bottom: 0;
+  content: "";
+  height: 10px;
+  margin: auto;
+  position: absolute;
+  right: rem(7);
+  top: 0;
+  transform: rotate(225deg);
+  width: 10px;
+}
+
+
+.pagination__next {
+  margin-left: rem(40);  
+}
+
+.pagination__next a {
+  position: relative;
+}
+
+.pagination__next a::before {
+  border-right: 1px solid $green;
+  border-top: 1px solid $green;
+  bottom: 0;
+  content: "";
+  height: rem(10);
+  margin: auto;
+  position: absolute;
+  right: rem(14);
+  top: 0;
+  transform: rotate(45deg);
+  width: rem(10);
+}

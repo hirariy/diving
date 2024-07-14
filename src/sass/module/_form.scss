@@ -1,9 +1,29 @@
 @use "global" as *;
 
 .form__items {
+  padding-bottom: rem(24);  
+  border-bottom: 1px dotted  $green;
   @include mq(md) {
+    padding-bottom: rem(40);
     display: flex;
     justify-content: space-between;
+  }
+}
+
+
+.form__items + .form__items {
+  margin-top: rem(24);   
+}
+
+.form__item {
+  font-family: $ja-font-family;
+  font-size: rem(16);
+  font-weight: $bold;
+  line-height: calc(24 / 16);
+  letter-spacing: 0.05em;  
+  @include mq(md) {
+    width: rem(220);
+    max-width: 100%;
   }
 }
 
@@ -12,12 +32,57 @@
   color: $white;
   background: #C94800;
   font-size: rem(12);
+  font-weight: $regular;
   margin-left: rem(8);
-  
+  padding: rem(2) rem(18);
+}
+
+.form__item.form__item--campaign {
+  align-self: center;
+}
+
+.form__item.form__item--campaign::after {
+  display: none;
 }
 
 .form__checks {
   flex-direction: column;
+  margin-top: rem(16);  
+  @include mq(md) {
+    margin-top: 0;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.form__checks__box {
+  @include mq(md) {
+    width: rem(480);
+    max-width: 100%;
+  }
+}
+
+
+.form__checks__box + .form__checks__box {
+  padding-top: rem(30);  
+}
+
+.form__select {
+  margin-top: rem(16);  
+}
+
+.form__items__private-information {
+  width: rem(282);
+  max-width: 100%;
+  margin-inline: auto;
+  margin-top: rem(40);
+  
+  @include mq(md) {
+    width: rem(700);
+    max-width: 100%;
+    text-align: center;
+    margin-top: rem(80);
+  }
 }
 
 .form__button {  

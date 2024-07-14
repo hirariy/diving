@@ -188,7 +188,7 @@
           メールアドレス
         </dt>
         <dd>
-          <input type="email" name="mail_address" value="" class="validate[]" />
+          <input type="email" name="mail_address" value="" class="validate[]" placeholder=""/>
         </dd>
       </dl>
       <dl class="form__items">
@@ -199,22 +199,22 @@
           <input type="text" name="company" value="" />
         </dd>
       </dl>
-      <dl class="form__items">
-        <dt class="form__item">
+      <dl class="form__items form__items--space">
+        <dt class="form__item form__item--check">
           お問合せ項目
         </dt>
         <dd class="form__checks">
-          <label><input type="checkbox" name="hoge" value="チェックボックス1" checked/><span>ダイビング講習について</span></label>
-          <label><input type="checkbox" name="hogehoge" value="チェックボックス2" checked/><span>ファンデイビングについて</span></label>
-          <label><input type="checkbox" name="hogehoge" value="チェックボックス2" checked/><span>体験ダイビングについて</span></label>
+          <label><input type="checkbox" name="hoge" value="チェックボックス1" checked/><span class="form__checks__box">ダイビング講習について</span></label>
+          <label><input type="checkbox" name="hogehoge" value="チェックボックス2" /><span class="form__checks__box">ファンデイビングについて</span></label>
+          <label><input type="checkbox" name="hogehoge" value="チェックボックス2"/><span class="form__checks__box">体験ダイビングについて</span></label>
         </dd>
       </dl>  
       <dl class="form__items">
-        <dt class="form__item">
+        <dt class="form__item form__item--campaign">
           キャンペーン
         </dt>
-        <dd class="">
-          <select name="hoge" class="">
+        <dd class="form__select">
+          <select name="hoge" class="styled-select ">
             <option value="">キャンペーン内容を選択</option>
             <option value="セレクト1">ライセンス取得</option>
             <option value="セレクト2">貸切体験ダイビング</option>
@@ -231,13 +231,13 @@
           <textarea name="contents"></textarea>
         </dd>
       </dl>
-      <dl>        
-        <dd class="">
-          <label><input type="checkbox" name="hoge" value="チェックボックス1" checked/><span>個人情報の取り扱いについて同意のうえ送信します。</span></label>         
+      <dl class="form__items__private-information">        
+        <dd class="form__items__private-information--box">
+          <label><input class="checkbox2" type="checkbox" name="hoge" value="チェックボックス1" checked/><span>個人情報の取り扱いについて同意のうえ送信します。</span></label>         
         </dd>
       </dl>        
       <div class="form__button">             
-        <a href="#" class="button">send<span></span></a>
+        <a href="#" class="button button--form">send<span></span></a>
       </div> 
     </form>
   </div>  

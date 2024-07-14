@@ -9,6 +9,7 @@
   @include mq(md) {        
     grid-template-columns: repeat(2, 1fr); // PCサイズでは2列
     // grid-template-columns: repeat(auto-fit, minmax(clamp(rem(350), 100vw - rem(920), rem(520)), 1fr)); // PCサイズでのカード幅を動的に調整
+    grid-auto-columns: rem(520);
     gap: rem(40);          
   }  
 }

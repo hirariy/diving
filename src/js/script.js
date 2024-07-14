@@ -342,38 +342,17 @@ box.each(function(){
 //     });
 // });
 
-document.addEventListener("DOMContentLoaded", function() {
-  const pagination = document.querySelector('.pagination-1');
-  const pages = pagination.querySelectorAll('li');
-  let currentPage = pagination.querySelector('.current');
+$(document).ready(function() {
+  $('.pagination-1 li a').on('click', function(event) {
+    event.preventDefault();
 
-  // ページクリック時のイベントリスナーを設定
-  pages.forEach(page => {
-    page.addEventListener('click', function(event) {
-      event.preventDefault();
+    // 元のボタンの反転を解除
+    $('.pagination-1 li').removeClass('active');
 
-      // 「prev」や「next」クラスの場合は処理を分ける
-      if (page.classList.contains('prev')) {
-        changePage(currentPage.previousElementSibling);
-      } else if (page.classList.contains('next')) {
-        changePage(currentPage.nextElementSibling);
-      } else {
-        changePage(page);
-      }
-    });
+    // クリックされたボタンを反転
+    $(this).parent().addClass('active');
   });
-
-  function changePage(newPage) {
-    if (newPage && newPage.tagName === 'LI' && !newPage.classList.contains('current')) {
-      currentPage.classList.remove('current');
-      newPage.classList.add('current');
-      currentPage = newPage;
-    }
-  }
 });
-
-
-
 });
 
 
