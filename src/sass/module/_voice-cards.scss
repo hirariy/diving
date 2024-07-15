@@ -1,13 +1,17 @@
 @use "global" as *;
 
 .voice-cards { 
+  display: grid; 
+  grid-template-columns: 1fr; // スマホサイズでは1列
+  gap: rem(40);  
+  justify-items: center; // 中央寄せ  
+  margin-top: rem(40);  
   @include mq(md) {    
     display: grid; 
-    grid-template-columns: repeat(2, 48.2%); 
+    grid-template-columns: repeat(2, 48.2%);    
     max-width: rem(1080);
     margin-right: auto;
     margin-left: auto;
-    flex-wrap: wrap;
     gap: 3.6%;    
   }  
 }
