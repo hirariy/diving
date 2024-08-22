@@ -15,11 +15,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 2em;
-  height: 2em;
+  width: rem(38);
+  height: rem(38);
   border: 1px solid #408f95;
-  border-radius: 1px;
+  border-radius: rem(1);
   color: #408f95;
+  font-family: $en-font2-family;
+  font-size: rem(16);
+  font-weight: $bold;
 }
 
 .pagination a:not(:hover) {
@@ -33,6 +36,7 @@
   pointer-events: none;
 }
 
+
 .pagination li:nth-child(n+6):not(.prev):not(.next) {
   display: none;
   @include mq(md) {
@@ -41,7 +45,7 @@
 }
 
 .pagination__prev {
-  margin-right: rem(40);  
+  margin-right: rem(28);  
   // display: block;
 }
 
@@ -66,7 +70,7 @@
 
 
 .pagination__next {
-  margin-left: rem(40);  
+  margin-left: rem(28);  
 }
 
 .pagination__next a {
@@ -86,3 +90,5 @@
   transform: rotate(45deg);
   width: rem(10);
 }
+
+

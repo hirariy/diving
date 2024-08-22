@@ -21,25 +21,35 @@
   
  
 
-  // .gallery__item a {
-  //   display: block;
-  //   width: 100%;
-  //   height: auto;
-  //   max-height: 100%;
-  // }
+  .gallery__item a {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 100%;
+  }
 
-  // .gallery__item img {
-  //   width:100%;
-  //   // height:auto;
-  //   height: 100%;
-  //   // max-height: 100%; // 最大高さを親要素に合わせる
-  //   object-fit: cover; /* 画像を親要素に合わせる */
-  //   vertical-align: bottom;/*画像の下にできる余白を削除*/
-  // }
+  .gallery__item img {
+    width:100%;
+    // height:auto;
+    height: 100%;
+    // max-height: 100%; // 最大高さを親要素に合わせる
+    object-fit: cover; /* 画像を親要素に合わせる */
+    vertical-align: bottom;/*画像の下にできる余白を削除*/
+  }
+
+
+
+  .gallery__item a {
+    display: grid;
+    grid-template-rows: subgrid; 
+    height: 100%;  
+  }
+
 
   .gallery__item:nth-of-type(1) {    
     aspect-ratio: 345 / 523;
     width: 100%;
+    height: 100%;
     @include mq(md) {
       grid-column: 1 / span 5;
       grid-row: 1 / span 2;           
@@ -48,13 +58,6 @@
       background: #000;
     }
   }
-
-  // .gallery__item:nth-of-type(1) img {
-  //   width: 100%;
-  //   height: 100%;
-  //   object-fit: cover;
-  // }
-
   
   .gallery__item:nth-of-type(2) {   
     aspect-ratio: 345 / 219;
@@ -65,13 +68,7 @@
       aspect-ratio: 580 / 369;
       width: 100%;
     }
-  }
-
-  .gallery__item:nth-of-type(2) img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
+  } 
   
   .gallery__item:nth-of-type(3) {    
     aspect-ratio: 345 / 219;
@@ -82,14 +79,7 @@
       aspect-ratio: 580 / 369;
       width: 100%;
     }
-  }
-
-  .gallery__item:nth-of-type(3) img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
+  } 
   
   .gallery__item:nth-of-type(4) {    
     aspect-ratio: 345 / 219;
@@ -100,14 +90,7 @@
       aspect-ratio: 580 / 369;
       width: 100%;
     }
-  }
-
-  .gallery__item:nth-of-type(4) img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
+  }  
   
   .gallery__item:nth-of-type(5) {   
     aspect-ratio: 345 / 219;
@@ -118,66 +101,58 @@
       aspect-ratio: 580 / 369;
       width: 100%;
     }
-  }
-
-  .gallery__item:nth-of-type(5) img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
+  }  
   
   .gallery__item:nth-of-type(6) {    
     aspect-ratio: 345 / 523;
-    width: 100%;
+    width: 100%;   
+    height: 100%;
     @include mq(md) {      
       grid-column: 7 / span 5;
       grid-row: 3 / span 2;
-      // aspect-ratio: 492 / 746;
-      // width: 100%;
-      background: skyblue;
+      aspect-ratio: 492 / 746;
+      width: 100%;    
     }
-  }
-  
-  // .gallery__item:nth-of-type(6) img {
-  //   width: 100%;
-  //   height: 100%;
-  //   object-fit: cover;
-  // } 
+  } 
 
 
+// /* モーダルCSSここから */
 
-  // モーダル
-
-
-/* モーダルCSSここから */
-.modalArea {
-  visibility: hidden; /* displayではなくvisibility */
-  opacity : 0;
+.modal {
+  display: none;
   position: fixed;
-  z-index: 10; /* サイトによってここの数値は調整 */
+  z-index: 9999;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+  background-color: rgba(30,30,30,0.8);
   transition: .4s;
 }
 
-.modalBg {
-  width: 100%;
-  height: 100%;
-  background-color: rgba(30,30,30,0.9);
-}
-
-.modalWrapper {
+.modalContents {  
   position: absolute;
   top: 50%;
   left: 50%;
-  transform:translate(-50%,-50%);
-  width: 70%;
-  max-width: 500px;
-  padding: 10px 30px;
-  background-color: #fff;
+  transform: translate(-50%, -50%);
+  max-width: 90%;
+  max-height: 90%;
+  width: auto; /* 自動で幅を調整 */
+  height: auto; /* 自動で高さを調整 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* 画像がモーダルの範囲を超えないようにする */
+  // background-color: #fff; /* モーダルの背景色を設定 */  
+  // border-radius: 8px; /* モーダルに角丸を追加 */
+}
+
+.modalContents img {
+  width: auto;
+  height: auto;
+  max-height: 100%;
+  max-height: 100%;
+  object-fit: contain;
 }
 
 .closeModal {
@@ -185,27 +160,11 @@
   top: 0.5rem;
   right: 1rem;
   cursor: pointer;
+  font-size: 1.5rem;
+  color: #fff;
 }
 
-.is-show { /* モーダル表示用クラス */
-  visibility: visible;
-  opacity : 1;
-}
-/* モーダルCSSここまで */
-
-
-/* 以下ボタンスタイル */
-button {
-  padding: 10px;
-  background-color: #fff;
-  border: 1px solid #282828;
-  border-radius: 2px;
-  cursor: pointer;
-}
-
-#openModal {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform:translate(-50%,-50%);
+.is-show {
+  display: block;
+  opacity: 1;
 }

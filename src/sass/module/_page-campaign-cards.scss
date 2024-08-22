@@ -6,7 +6,7 @@
   grid-template-columns: 1fr; // スマホサイズでは1列
   gap: rem(40);  
   justify-items: center; // 中央寄せ
-  margin-top: rem(40);
+  margin-top: rem(39);
   @include mq(md) {        
     grid-template-columns: repeat(2, 1fr); // PCサイズでは2列
     // grid-template-columns: repeat(auto-fit, minmax(clamp(rem(350), 100vw - rem(920), rem(520)), 1fr)); // PCサイズでのカード幅を動的に調整

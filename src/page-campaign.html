@@ -166,11 +166,29 @@
 </div>
 
 <!-- パンくず -->
-<div class="breadcrumb">
+
+<div class="breadcrumb layout-breadcrumb">
   <div class="breadcrumb__inner inner">
-    <div>top > キャンペーン</div>
-  </div><!-- /.inner -->
-</div><!-- /.p-breadcrumb -->  
+    <ol  class="breadcrumb__items" itemscope itemtype="https://schema.org/BreadcrumbList">
+      <li class="breadcrumb__item" itemprop="itemListElement" itemscope
+          itemtype="https://schema.org/ListItem">
+        <a itemprop="item" href="index.html">
+            <span itemprop="name">top</span>
+        </a>
+        <meta itemprop="position" content="1" />
+      </li>
+
+      <li class="breadcrumb__item" itemprop="itemListElement" itemscope
+          itemtype="https://schema.org/ListItem">
+        <a itemprop="item" href="#">
+            <span itemprop="name">キャンペーン</span>
+        </a>
+        <meta itemprop="position" content="2" />
+      </li>     
+    </ol>
+  </div>
+</div>
+
 
 <div class="page-campaign layout-page-campaign">
   <div class="page-campaign__inner inner">
@@ -295,6 +313,9 @@
       </div>             
     </div>     
   </div> 
+  <div class="page-campaign__decoration">
+    <img src="./assets/images/common/decoration3.png" alt="魚の群れのイラスト画像">
+   </div> 
 </div>
 <ol class="pagination layout-pagination">
   <li class="prev pagination__prev"><a href="#"></a></li>
@@ -339,7 +360,7 @@
   </div>
   </div>
    <div class="contact__decoration">
-    <img src="./assets/images/common/contact.png" alt="魚の群れのイラスト画像">
+    <img src="./assets/images/common/decoration6.png" alt="魚の群れのイラスト画像">
    </div> 
 </section>
 

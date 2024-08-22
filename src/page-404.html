@@ -160,21 +160,44 @@
 
 
 <div class="page-404 layout-page-404">
-  <div class="page-404__inner inner">
-    <!-- パンくず -->
-    <div class="breadcrumb breadcrumb--white ">
-      <div class="breadcrumb__inner inner">
-        <div>top > 404</div>
-      </div><!-- /.inner -->
-    </div><!-- /.p-breadcrumb -->  
-    <h1 class="page-404__title">4 0 4</h1>
-    <p class="page-404__text">申し訳ありません。
-      お探しのページが見つかりません。</p>
-    <div class="page-404__button">             
-      <a href="#" class="button button--white">page top<span></span></a>
-    </div> 
+  
+ <!-- パンくず -->
+
+<div class="breadcrumb breadcrumb--white layout-breadcrumb">
+  <div class="breadcrumb__inner inner">
+    <ol  class="breadcrumb__items" itemscope itemtype="https://schema.org/BreadcrumbList">
+      <li class="breadcrumb__item breadcrumb__item--white" itemprop="itemListElement" itemscope
+          itemtype="https://schema.org/ListItem">
+        <a itemprop="item" href="index.html">
+            <span itemprop="name">top</span>
+        </a>
+        <meta itemprop="position" content="1" />
+      </li>
+
+      <li class="breadcrumb__item" itemprop="itemListElement" itemscope
+          itemtype="https://schema.org/ListItem">
+        <a itemprop="item" href="#">
+            <span itemprop="name">キャンペーン</span>
+        </a>
+        <meta itemprop="position" content="2" />
+      </li>     
+    </ol>
   </div>
 </div>
+ 
+
+  <section class="section-404 layout-page-section-404">   
+    <div class="section-404__inner inner">
+      <h1 class="section-404__title">4 0 4</h1>
+      <p class="section-404__text">申し訳ありません。<br>
+        お探しのページが見つかりません。</p>
+      <div class="section-404__button">             
+        <a href="#" class="button button--white">page top<span></span></a>
+      </div> 
+    </div>
+  </section>
+</div>
+
 
 
   <footer class="footer">

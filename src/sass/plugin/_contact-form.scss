@@ -161,7 +161,7 @@ button,
 	display: none;
 
 	+ span {
-		display: inline-block;
+		display: block;
 		position: relative;
 		padding: 0 0 0 calc($check-size + $check-space);
 		margin-left:0 $check-space-betweenRadio 0 0;
@@ -253,7 +253,7 @@ button,
 			content: "";
 			position: absolute;
 			top: 50%;
-			left: 0;
+			left: rem(-20);
 			display: block;
 			opacity: 1;
 			/*チェックマークじゃない場合は以下を変更する*/
@@ -274,7 +274,7 @@ button,
   
 // }
 
-.tyled-select {
+.styled-select {
 	/*↓リセットCSS */
 	// border-radius: 0;
 	font-family: inherit;

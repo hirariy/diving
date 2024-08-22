@@ -1,19 +1,49 @@
 @use "global" as *;
 
 .breadcrumb {
-  max-width: rem(1080);
-  width: 100%;
-  // padding: rem(90) 0;
+  // max-width: rem(1080);
+  width: 100%;  
   color: $black;
   font-size: rem(14);
-  margin-top: rem(8);
+  font-weight: $regular;/*標準*/  
   margin-inline: auto;
-  
-  @include mq(md) {
-    // padding: rem(100) 0;
-  }
+  text-transform: uppercase;
+  display: inline-block;/*横に並ぶように*/  
 }
 
 .breadcrumb.breadcrumb--white {
   color: $white;
+}
+
+.breadcrumb__inner {
+  max-width: rem(1080);
+}
+
+
+.breadcrumb__items .breadcrumb__item {
+  display: inline; /* 各アイテムを横に並べる */
+}
+
+.breadcrumb__items .breadcrumb__item:not(:last-child):after {
+  content: ''; /* 空のコンテンツを設定 */
+  display: inline-block;
+  width: rem(15);
+  height: rem(10);
+  background-image: url('../images/common/Vector.png'); /* 矢印アイコン */
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.breadcrumb__items .breadcrumb__item.breadcrumb__item--white:after {
+  background-image: url('../images/common/Vector-white.png'); /* 矢印アイコン */
+}
+
+.breadcrumb__items .breadcrumb__item:last-child:after {
+  content: none; /* 最後のアイテムにはコンテンツを表示しない */
+}
+
+
+.breadcrumb__item a:hover {
+  text-decoration: underline; /* ホバー時に下線を追加 */
 }

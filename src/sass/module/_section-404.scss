@@ -1,0 +1,42 @@
+@use "global" as *;
+
+.section-404 {
+  background: $green;
+  background-image: url(../images/common/404_bg.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 50%;
+  color: $white;
+  padding-bottom: rem(40);  
+  @include mq(md) {
+    background-position: 30%;
+    padding-bottom: rem(148);    
+  }
+}
+
+.section-404__title {
+  font-size: rem(80);
+  font-family: $en-font2-family;
+  font-weight: $normal;
+  text-align: center;  
+  @include mq(md) {
+    font-size: rem(160);
+    margin-top: rem(30);    
+  }
+}
+
+.section-404__text {
+  text-align: center;
+  font-size: rem(16);
+  @include mq(md) {
+    margin-top: rem(50);
+  } 
+}
+
+.section-404__button {
+  text-align: center;
+  margin-top: rem(40);
+  @include mq(md) {
+    margin-top: rem(52);    
+  }
+}

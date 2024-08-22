@@ -3,7 +3,7 @@
 
 .information-card {
   box-sizing: border-box;
-  padding: rem(20);
+  padding: rem(16) rem(22) rem(20);
   display: none;
   text-align: left;
   border: 1px solid $green; 
@@ -29,7 +29,7 @@
 
 .information-card__title {
   border-bottom: rem(1) solid $green;
-  padding-bottom: rem(8);
+  padding-bottom: rem(2);
 }
 
 .information-card__text {

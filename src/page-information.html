@@ -162,15 +162,32 @@
     <source media="(min-width: 768px)" srcset="./assets/images/common/sub-information-pc.jpg">           
     <img src="./assets/images/common/sub-information-sp.jpg" alt="ウミガメが青い海で泳いでいる画像">            
   </picture>
-  <h1 class="sub-main-view__title">information</h1>        
+  <h1 class="sub-main-view__title sub-main-view__title--top">information</h1>        
 </div>
 
 <!-- パンくず -->
-<div class="breadcrumb">
+
+<div class="breadcrumb layout-breadcrumb">
   <div class="breadcrumb__inner inner">
-    <div>top > ダイビング情報</div>
-  </div><!-- /.inner -->
-</div><!-- /.p-breadcrumb -->  
+    <ol  class="breadcrumb__items" itemscope itemtype="https://schema.org/BreadcrumbList">
+      <li class="breadcrumb__item" itemprop="itemListElement" itemscope
+          itemtype="https://schema.org/ListItem">
+        <a itemprop="item" href="index.html">
+            <span itemprop="name">top</span>
+        </a>
+        <meta itemprop="position" content="1" />
+      </li>
+
+      <li class="breadcrumb__item" itemprop="itemListElement" itemscope
+          itemtype="https://schema.org/ListItem">
+        <a itemprop="item" href="#">
+            <span itemprop="name">ダイビング情報</span>
+        </a>
+        <meta itemprop="position" content="2" />
+      </li>     
+    </ol>
+  </div>
+</div> 
 
 
 <div class="page-information layout-page-information">
@@ -184,7 +201,7 @@
           <span class="info-tab__trigger js-tab-trigger" data-id="tab02">ファン<br class="u-mobile">ダイビング</span>
         </li>
         <li class="info-tabs__tab info-tab">
-          <span class="info-tab__trigger js-tab-trigger" data-id="tab03">体験<br class="u-mobile">ダイビング</span>
+          <span class="info-tab__trigger info-tab__trigger--width  js-tab-trigger" data-id="tab03">体験<br class="u-mobile">ダイビング</span>
         </li>
       </ul><!-- .tab-menu -->
   
@@ -232,7 +249,7 @@
     </div>
   </div>
   <div class="page-information__decoration">
-    <img src="./assets/images/common/info-decoration.png" alt="魚の群れのイラスト画像">
+    <img src="./assets/images/common/decoration3.png" alt="魚の群れのイラスト画像">
    </div> 
 </div>
 
@@ -268,7 +285,7 @@
   </div>
   </div>
    <div class="contact__decoration">
-    <img src="./assets/images/common/contact.png" alt="魚の群れのイラスト画像">
+    <img src="./assets/images/common/decoration6.png" alt="魚の群れのイラスト画像">
    </div> 
 </section>
 

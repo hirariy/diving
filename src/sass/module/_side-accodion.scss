@@ -30,14 +30,13 @@
   // border-color: transparent transparent transparent $green;
   // clip-path: polygon(0 0, 50% 100%, 100% 0);
   border-top: rem(18) solid $green;
-  border-right: rem(12) solid transparent;
-  border-left: rem(12) solid transparent;
-
+  border-right: rem(11) solid transparent;
+  border-left: rem(11) solid transparent;
   position: absolute;
-  top: 0;
+  top: rem(6);
   left: 0;
   bottom: 0;
-  margin: auto;
+  margin: auto; transform: rotate(30deg);
 }
 
 
@@ -46,7 +45,8 @@
 }
 
 .side-accordion__header.open:before {
-  transform: rotate(626deg);
+  transform: rotate(120deg);
+  top: rem(-2);
 }
 
 

@@ -4,9 +4,12 @@
 .tabs {
   display: grid; 
   grid-template-columns:repeat(2, 1fr); // スマホサイズでは1列
-  gap: rem(16) rem(21);  
+  gap: rem(17) rem(18);  
   justify-items: center; // 中央寄せ
-  margin-top: rem(40);
+  // margin-top: rem(40);
+  font-family: $ja-font-family;
+  font-size: rem(14);
+  line-height: calc(22 / 14);
   @include mq(md) {        
     grid-template-columns: repeat(4, 1fr); // PCサイズでは2列
     // grid-template-columns: repeat(auto-fit, minmax(clamp(rem(350), 100vw - rem(920), rem(520)), 1fr)); // PCサイズでのカード幅を動的に調整
@@ -24,7 +27,7 @@
     text-align: center;
     color: $green;    
     cursor: pointer;
-    padding: rem(6) 0;   
+    padding: rem(5) 0;   
   }
 
   .tab-trigger.is-active {

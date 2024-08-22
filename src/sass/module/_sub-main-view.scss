@@ -26,16 +26,23 @@
   transform: translate(-50%, -50%);
   text-align: center;
   color: $white; 
+  text-transform: capitalize;
   font-family: $en-font2-family;
   font-size: rem(40);
   font-weight: $regular;
   line-height: 1;
-  letter-spacing: 0.05em;
+  // letter-spacing: 0.05em;
   white-space:nowrap;
   margin: auto;   
+
   @include mq(md) {
     font-size: rem(80);
   }
 }
   
-
+.sub-main-view__title.sub-main-view__title--top {
+  top: 50%;
+  @include mq(md) {
+    top: 59%;
+  }
+}

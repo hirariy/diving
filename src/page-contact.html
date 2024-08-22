@@ -37,7 +37,7 @@
   <header class="header js-header">
     <div class="header__inner">
         <div class="header__logo">
-            <a href="#" class="header__logoLink"><img src="./assets/images/common/logo.svg" alt="CodeUpsロゴマーク"></a>
+            <a href="index.html" class="header__logoLink"><img src="./assets/images/common/logo.svg" alt="CodeUpsロゴマーク"></a>
         </div>
         <div class="header__drawer hamburger js-hamburger">
           <span></span>
@@ -174,13 +174,13 @@
  
 <div class="page-contact layout-page-contact">
   <div class="page-contact__inner inner">
-    <form class="page-contact__form form"action="" method="post" id="">          
+    <form class="page-contact__form form" action="mail.php" method="post" id="">          
       <dl class="form__items">
         <dt class="form__item">
           お名前
         </dt>
         <dd>
-          <input type="text" name="company" value="" />
+          <input type="text" name="お名前" value="" placeholder="沖縄　太郎"/>
         </dd>
       </dl>
       <dl class="form__items">
@@ -188,7 +188,7 @@
           メールアドレス
         </dt>
         <dd>
-          <input type="email" name="mail_address" value="" class="validate[]" placeholder=""/>
+          <input type="email" name="メールアドレス" value="" class="validate[]" placeholder="aaa000@ggmail.com"/>
         </dd>
       </dl>
       <dl class="form__items">
@@ -196,7 +196,7 @@
           電話番号
         </dt>
         <dd>
-          <input type="text" name="company" value="" />
+          <input type="text" name="電話番号" value="" placeholder="000-0000-0000"/>
         </dd>
       </dl>
       <dl class="form__items form__items--space">
@@ -204,9 +204,9 @@
           お問合せ項目
         </dt>
         <dd class="form__checks">
-          <label><input type="checkbox" name="hoge" value="チェックボックス1" checked/><span class="form__checks__box">ダイビング講習について</span></label>
-          <label><input type="checkbox" name="hogehoge" value="チェックボックス2" /><span class="form__checks__box">ファンデイビングについて</span></label>
-          <label><input type="checkbox" name="hogehoge" value="チェックボックス2"/><span class="form__checks__box">体験ダイビングについて</span></label>
+          <label><input type="checkbox" name="ダイビング講習について[]" value="チェックボックス1" checked/><span class="form__checks__box">ダイビング講習について</span></label>
+          <label><input type="checkbox" name="ファンデイビングについて[]" value="チェックボックス2" /><span class="form__checks__box">ファンデイビングについて</span></label>
+          <label><input type="checkbox" name="体験ダイビングについて[]" value="チェックボックス2"/><span class="form__checks__box">体験ダイビングについて</span></label>
         </dd>
       </dl>  
       <dl class="form__items">
@@ -214,7 +214,7 @@
           キャンペーン
         </dt>
         <dd class="form__select">
-          <select name="hoge" class="styled-select ">
+          <select name="キャンペーン" class="styled-select ">
             <option value="">キャンペーン内容を選択</option>
             <option value="セレクト1">ライセンス取得</option>
             <option value="セレクト2">貸切体験ダイビング</option>
@@ -228,19 +228,22 @@
           お問合せ内容
         </dt>
         <dd>
-          <textarea name="contents"></textarea>
+          <textarea name="お問い合せ内容"></textarea>
         </dd>
       </dl>
       <dl class="form__items__private-information">        
         <dd class="form__items__private-information--box">
-          <label><input class="checkbox2" type="checkbox" name="hoge" value="チェックボックス1" checked/><span>個人情報の取り扱いについて同意のうえ送信します。</span></label>         
+          <label><input class="checkbox2" type="checkbox" name="お問い合せ内容" value="チェックボックス1" checked/><span>個人情報の取り扱いについて同意のうえ送信します。</span></label>         
         </dd>
       </dl>        
-      <div class="form__button">             
-        <a href="#" class="button button--form">send<span></span></a>
+      <div class="form__button">         
+        <button class="button button--form" type="submit">send<span></span></button>
       </div> 
     </form>
   </div>  
+  <div class="page-contact__decoration">
+    <img src="./assets/images/common/decoration3.png" alt="魚の群れのイラスト画像">
+   </div>
 </div>
 
 
